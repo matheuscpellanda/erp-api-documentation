@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import EntitySidebar from '../components/EntitySidebar';
@@ -12,7 +13,7 @@ export default class Entities extends Component {
       <>
         <Header />
         <div className="entities">
-          <EntitySidebar />
+          <EntitySidebar selected="none" />
           <article>
             <span>Entities</span>
             <h1>Entity reference documentation</h1>

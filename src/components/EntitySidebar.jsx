@@ -47,5 +47,5 @@ export default class EntitySidebar extends Component {
 }
 
 EntitySidebar.propTypes = {
-  selected: PropTypes.func.isRequired,
+  selected: PropTypes.string.isRequired,
 };

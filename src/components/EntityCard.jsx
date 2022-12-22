@@ -105,9 +105,9 @@ export default class EntityCard extends Component {
 EntityCard.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    properties: PropTypes.arrayOf(PropTypes.string),
+    properties: PropTypes.arrayOf(PropTypes.shape()),
     type: PropTypes.string.isRequired,
-    objects_properties: PropTypes.arrayOf(PropTypes.string),
+    objects_properties: PropTypes.arrayOf(PropTypes.shape()),
     values: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };
