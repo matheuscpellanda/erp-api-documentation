@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import Header from '../components/Header'
-import EntitySidebar from '../components/EntitySidebar'
-import './css/Entities.css'
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import Header from '../components/Header';
+import EntitySidebar from '../components/EntitySidebar';
+import './css/Entities.css';
 import entitiesVariables from '../assets/variables/entities.json';
 import Footer from '../components/Footer';
 import EntityCard from '../components/EntityCard';
-
-
 
 export default class Entity extends Component {
   DEFAULT_ROUTE = {};
@@ -21,21 +20,21 @@ export default class Entity extends Component {
     let newName = name;
     if (name) {
       newName = name[0].toUpperCase();
-      newName = newName + name.slice(1);
+      newName += name.slice(1);
     }
     return newName;
   };
 
   updateEntitiesNames = () => {
-    for (let route of Object.keys(this.DEFAULT_ROUTE)) {
+    for (const route of Object.keys(this.DEFAULT_ROUTE)) {
       delete this.DEFAULT_ROUTE[route];
     }
-    this.DEFAULT_ROUTE['entities'] = "/entities/";
+    this.DEFAULT_ROUTE.entities = '/entities/';
     const variables = Object.keys(entitiesVariables);
     variables.forEach((variable) => {
       this.DEFAULT_ROUTE[variable] = `/entities/${variable}`;
     });
-  }
+  };
 
   handlePageChange = (param) => {
     const { history, history: { location: { pathname } } } = this.props;
@@ -53,7 +52,7 @@ export default class Entity extends Component {
     }
     const newPagePath = Object.values(this.DEFAULT_ROUTE)[newIndex];
     history.push(newPagePath);
-    window.scroll(0,0)
+    window.scroll(0, 0);
   };
 
   render() {
@@ -66,37 +65,61 @@ export default class Entity extends Component {
     return (
       <>
         <Header />
-        <div className='entities'>
-          <EntitySidebar selected={ entity } />
+        <div className="entities">
+          <EntitySidebar selected={entity} />
           <article>
-            <span>Entities {'>'} { pageTitle }</span>
+            <span>
+              Entities
+              {' '}
+              {'>'}
+              {' '}
+              { pageTitle }
+            </span>
             <h1>{ pageTitle }</h1>
             <hr />
-            <div className='row'>
+            <div className="row">
               <section className="entities-variables">
-              {
-                entitiesVariables[entity].map((variable) => <EntityCard key={ variable.name } data={ variable } />)
+                {
+                entitiesVariables[entity].map(
+                  (variable) => <EntityCard key={variable.name} data={variable} />,
+                )
               }
               </section>
             </div>
             <hr />
-            <div className='row'>
-              <button type='button' className='button-previous-entity' onClick={ () => this.handlePageChange('prev') } >{`< ${prevPageTitle}`}</button>
+            <div className="row">
+              <button type="button" className="button-previous-entity" onClick={() => this.handlePageChange('prev')}>{`< ${prevPageTitle}`}</button>
               {
                 nextPageTitle ? (
                   <button
-                  type='button'
-                  className='button-next-entity'
-                  onClick={ () => this.handlePageChange('next') } >
+                    type="button"
+                    className="button-next-entity"
+                    onClick={() => this.handlePageChange('next')}
+                  >
                     {`${nextPageTitle} >`}
-                  </button>)
-                : null
+                  </button>
+                )
+                  : null
               }
             </div>
           </article>
         </div>
         <Footer />
       </>
-    )
+    );
   }
 }
+
+Entity.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+    location: PropTypes.shape({
+      pathname: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      entity: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};

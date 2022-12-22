@@ -17,6 +17,17 @@
         "react"
     ],
     "rules": {
-        "react/prefer-stateless-function": [1, { "ignorePureComponents": true }]
+        "react/prefer-stateless-function": [1, { "ignorePureComponents": true }],
+        "no-restricted-syntax" : [
+            "error",
+            {
+                "selector" : "MethodDefinition[kind!='constructor'] && MethodDefinition[key.name!='render']",
+                "message" : "Uso de 'FunctionExpress' não permitido. Utilize o formato de 'const func = (params) => {};'"
+            }
+            // {
+            //     "selector" : "FunctionDeclaration",
+            //     "message" : "Uso de 'FunctionDeclaration' não permitido. Utilize o formato de 'const func = (params) => {};'"
+            // }
+        ]
     }
 }
