@@ -1,0 +1,35 @@
+:root {
+  --elevation-3: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+footer {
+  display: flex;
+  width: 95vw;
+  background-color: white;
+  height: 5vh;
+  border-top: 0.1vh solid rgb(209, 209, 209);
+  margin: 3vh auto 0;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+span {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  color: grey;
+  font-weight: 400;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+  width: 50px;
+}

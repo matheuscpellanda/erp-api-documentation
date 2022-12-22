@@ -1,0 +1,29 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+}
+
+.not-found {
+  height: 90vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1 {
+  font-size: 30vh;
+  margin-top: 3vh;
+  margin-bottom: auto;
+}
+
+h2 {
+  font-size: 7vh;
+  margin-top: auto;
+  margin-bottom: 3vh;
+}

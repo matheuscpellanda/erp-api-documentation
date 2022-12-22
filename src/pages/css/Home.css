@@ -1,0 +1,115 @@
+.home {
+  margin-top: 94px;
+  background: rgb(255,255,255);
+}
+
+.wallpaper {
+  background: linear-gradient(13deg, rgba(0,252,255,1) 0%, rgba(74,189,181,1) 16%, rgba(130,255,194,1) 56%, rgba(115,186,181,1) 87%, rgba(0,252,255,1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.home-title {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 35px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 10vh auto 0 auto;
+}
+
+.home-title color {
+  color: red;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  gap: 50px;
+}
+
+.row-get-started {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  margin: 5vh auto 30vh auto;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.home-get-started {
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid black;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  -webkit-transition: background-color 0.7s ease-out;
+}
+
+.home-get-started:hover {
+  background-color: white;
+  color: black;
+}
+
+.home-last-updated {
+  margin: 0 5px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: black;
+}
+
+.row-example-payments {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto 10vh auto;
+  box-sizing: border-box;
+}
+
+.image-example-payments {
+  width: 15vw;
+}
+
+.code-example {
+  width: 100%;
+  padding: 25px;
+  border-radius: 25px;
+  background: rgb(40, 44, 52);
+  color: white;
+  box-sizing: border-box;
+  text-align: start;
+}
+
+.code-example color {
+  color: rgb(255, 0, 0);
+  margin-right: 7px;
+}
+
+.title-example-payments {
+  margin: 0 auto 10vh;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+pre {
+  display: flex;
+  white-space: pre-wrap;
+  margin: 1em 0;
+  overflow: -moz-hidden-unscrollable;
+}

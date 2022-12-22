@@ -1,0 +1,60 @@
+:root {
+  --elevation-3: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  --elevation-1: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.main-header {
+  height: 7vh;
+  min-height: 60px;
+  width: 100vw;
+  background-color: white;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  border-bottom: 0.1vh solid rgb(209, 209, 209);
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.gap {
+  gap: 30px;
+}
+
+.header-primary, .header-secondary {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header-primary {
+  border-radius: 25px;
+  width: 5vw;
+  box-shadow: var(--elevation-1);
+}
+
+.header-primary:nth-last-of-type(1) {
+  background-color: rgb(137, 198, 255);
+}
+
+.header-primary:nth-last-of-type(2) {
+  background-color: rgb(137, 255, 143);
+}
+
+.header-secondary:hover {
+  background-color: rgb(230, 230, 230);
+  border-radius: 25px;
+}
+
+.header-primary:hover{
+  box-shadow: var(--elevation-3);
+  background-color: rgb(255, 135, 135);
+}
