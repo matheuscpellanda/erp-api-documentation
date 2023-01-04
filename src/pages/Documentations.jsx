@@ -16,7 +16,7 @@ export default class Documentations extends Component {
             <hr />
             <h2>Testes</h2>
             <section>
-              <Link className="doc-box" to="/doc-reference-api/services">
+              <Link className="doc-box" to="/erp-api-documentation/services">
                 <div className="row">
                   📄️
                   <h2>Teste 1</h2>
@@ -24,7 +24,7 @@ export default class Documentations extends Component {
                 <hr />
                 <h3>Show all teste1 documentations</h3>
               </Link>
-              <Link className="doc-box" to="/doc-reference-api/services">
+              <Link className="doc-box" to="/erp-api-documentation/services">
                 <div className="row">
                   📄️
                   <h2>Teste 2</h2>
@@ -36,7 +36,7 @@ export default class Documentations extends Component {
             </section>
             <h2>Testes</h2>
             <section>
-              <Link className="doc-box" to="/doc-reference-api/entities">
+              <Link className="doc-box" to="/erp-api-documentation/entities">
                 <div className="row">
                   📄️
                   <h2>Entities</h2>
@@ -44,7 +44,7 @@ export default class Documentations extends Component {
                 <hr />
                 <h3>Show all entities documentations</h3>
               </Link>
-              <Link className="doc-box" to="/doc-reference-api/usecases">
+              <Link className="doc-box" to="/erp-api-documentation/usecases">
                 <div className="row">
                   📄️
                   <h2>Use Cases</h2>
@@ -52,7 +52,7 @@ export default class Documentations extends Component {
                 <hr />
                 <h3>Show all use cases documentations</h3>
               </Link>
-              <Link className="doc-box" to="/doc-reference-api/providers">
+              <Link className="doc-box" to="/erp-api-documentation/providers">
                 <div className="row">
                   📄️
                   <h2>Providers</h2>
@@ -60,7 +60,7 @@ export default class Documentations extends Component {
                 <hr />
                 <h3>Show all providers documentations</h3>
               </Link>
-              <Link className="doc-box" to="/doc-reference-api/repositories">
+              <Link className="doc-box" to="/erp-api-documentation/repositories">
                 <div className="row">
                   📄️
                   <h2>Repositories</h2>
@@ -68,7 +68,7 @@ export default class Documentations extends Component {
                 <hr />
                 <h3>Show all repositories documentations</h3>
               </Link>
-              <Link className="doc-box" to="/doc-reference-api/services">
+              <Link className="doc-box" to="/erp-api-documentation/services">
                 <div className="row">
                   📄️
                   <h2>Services</h2>

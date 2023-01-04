@@ -29,10 +29,10 @@ export default class Entity extends Component {
     for (const route of Object.keys(this.DEFAULT_ROUTE)) {
       delete this.DEFAULT_ROUTE[route];
     }
-    this.DEFAULT_ROUTE.entities = '/doc-reference-api/entities/';
+    this.DEFAULT_ROUTE.entities = '/erp-api-documentation/entities/';
     const variables = Object.keys(entitiesVariables);
     variables.forEach((variable) => {
-      this.DEFAULT_ROUTE[variable] = `/doc-reference-api/entities/${variable}`;
+      this.DEFAULT_ROUTE[variable] = `/erp-api-documentation/entities/${variable}`;
     });
   };
 

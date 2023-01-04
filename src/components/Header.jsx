@@ -7,13 +7,13 @@ export default class Header extends Component {
     return (
       <header className="main-header">
         <div className="row gap">
-          <Link to="/doc-reference-api/entities" className="header-secondary">Entities</Link>
+          <Link to="/erp-api-documentation/entities" className="header-secondary">Entities</Link>
           <Link to="/*" className="header-secondary">Use Cases</Link>
           <Link to="/*" className="header-secondary">Providers</Link>
           <Link to="/*" className="header-secondary">Repositories</Link>
           <Link to="/*" className="header-secondary">Services</Link>
-          <Link to="/doc-reference-api/" className="header-primary">Home</Link>
-          <Link to="/doc-reference-api/docs" className="header-primary">Docs</Link>
+          <Link to="/erp-api-documentation/" className="header-primary">Home</Link>
+          <Link to="/erp-api-documentation/docs" className="header-primary">Docs</Link>
         </div>
       </header>
     );
