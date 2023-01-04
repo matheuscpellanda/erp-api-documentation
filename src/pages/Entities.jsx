@@ -33,12 +33,12 @@ export default class Entities extends Component {
               </section>
             </div>
             <div className="row">
-              <button type="button" className="button-previous-entity" onClick={() => { history.push('/'); }}>
+              <button type="button" className="button-previous-entity" onClick={() => { history.push('/doc-reference-api/'); }}>
                 {'<'}
                 {' '}
                 Home
               </button>
-              <button type="button" className="button-next-entity" onClick={() => { history.push('/entities/orders'); }}>
+              <button type="button" className="button-next-entity" onClick={() => { history.push('/doc-reference-api/entities/orders'); }}>
                 Orders
                 {' '}
                 {'>'}

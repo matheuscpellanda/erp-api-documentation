@@ -17,7 +17,8 @@
         "react"
     ],
     "rules": {
-        "react/prefer-stateless-function": [1, { "ignorePureComponents": true }],
+        "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
+        "react/jsx-filename-extension": [0, { "allow": "as-needed" }],
         "no-restricted-syntax" : [
             "error",
             {

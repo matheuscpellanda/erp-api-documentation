@@ -11,19 +11,31 @@
   flex-direction: column;
 }
 
-h1, h2 {
-  margin-right: auto;
-  margin-left: auto;
-}
-
 h1 {
-  font-size: 30vh;
-  margin-top: 3vh;
-  margin-bottom: auto;
+  font-size: 25vh;  
+  margin: 25vh auto 0;
+  padding: 0;
 }
 
 h2 {
-  font-size: 7vh;
-  margin-top: auto;
-  margin-bottom: 3vh;
+  font-size: 5vh;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h3 {
+  font-size: 5vh;
+  margin: 20px auto auto;
+  color: darkred;
+  padding: 0;
+}
+
+.lootie {
+  margin: 0;
+  right: -6vw;
+  top: 55px;
+  width: 40vw;
+  min-width: 500px;
+  height: 35vh;
+  position: fixed;
 }
