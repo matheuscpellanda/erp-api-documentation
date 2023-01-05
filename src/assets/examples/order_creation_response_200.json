@@ -1,0 +1,71 @@
+{
+	"code": 200,
+	"message": "OK",
+	"result": {
+		"ID": "9********",
+		"CREATED_AT": "2022-08-30T17:59:44+0000",
+		"CUSTOMER_ADDRESS": {
+			"ADDRESS": "Rua Bosque Selvagem, 111",
+			"CITY": "Vitória",
+			"COMPLEMENT": "101",
+			"COUNTRY": "Brasil",
+			"DISTRICT": "Praia do Canto",
+			"STATE": "Espiríto Santo",
+			"ZIPCODE": "12345678"
+		},
+		"CUSTOMER_EMAIL": "john.doe@test.com",
+		"CUSTOMER_ID": "1********",
+		"CUSTOMER_IDENTIFICATION": "12345678901",
+		"CUSTOMER_NAME": "John Doe",
+		"CUSTOMER_PHONE": "+5527999998888",
+		"DISCOUNTS": 41.1,
+		"LAST_UPDATE": "2023-01-03T18:01:39+0000",
+		"NUMBER": 3410,
+		"PAYMENT_AMOUNT": 4520.48,
+		"PAYMENT_DATE": "2022-10-11:01:37+0000",
+		"PAYMENT_DETAILS": {
+			"ASSOCIATED_COMPANY": "Nenhuma",
+			"INSTALLMENTS": "1",
+			"METHOD": "Pix"
+		},
+		"PAYMENT_GATEWAY": "MercadoPago",
+		"PAYMENT_ID": "53249318226",
+		"PAYMENT_STATUS": "Pago",
+		"PLATFORM": "nuvemshop",
+		"PRODUCT_ITEMS": [
+			{
+				"ID": "1*********",
+				"IMAGE_URL": "bubblebee.jpg",
+				"PRICE": 4820.00,
+				"PRODUCT_NAME": "Optimus Prime",
+				"PROMOTIONAL_PRICE": 4520.48,
+				"QUANTITY": "1",
+				"SKU": "******",
+				"VARIANT_ID": "*****",
+				"VARIANT_NAME": "Padrão"
+			}
+		],
+		"SHIPPING_ADDRESS": {
+			"ADDRESS": "Rua Bosque Selvagem, 111",
+			"CITY": "Vitória",
+			"COMPLEMENT": "101",
+			"COUNTRY": "Brasil",
+			"DISTRICT": "Praia do Canto",
+			"STATE": "Espiríto Santo",
+			"ZIPCODE": "12345678",
+			"RECEIVER_NAME": "Lara Croft"
+		},
+		"SHIPPING_COMPANY": "Jadlog",
+		"SHIPPING_COST": 19.68,
+		"SHIPPING_DISCOUNT": 0,
+		"SHIPPING_GATEWAY": "Melhor Envio",
+		"SHIPPING_STATUS": "Não embalado",
+		"SHIPPING_TRACKING_NUMBER": "",
+		"SHIPPING_TYPE": "Entrega",
+		"SHIPPING_URL_TRACKING": "",
+		"STATUS": "Embalagem",
+		"STOREFRONT": "mobile",
+		"TOKEN": "**************",
+		"TOTAL_AMOUNT": 4520.48
+	}
+}

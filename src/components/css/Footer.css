@@ -14,11 +14,12 @@ footer {
   box-sizing: border-box;
 }
 
-.row {
+footer .row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  padding: 0;
 }
 
 span {
@@ -30,6 +31,9 @@ span {
   font-family: 'Courier New', Courier, monospace;
 }
 
-img {
-  width: 50px;
+footer img {
+  width: 30px;
+  max-width: 40px;
+  max-height: 30px;
+  margin: 0;
 }

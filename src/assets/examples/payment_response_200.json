@@ -10,14 +10,14 @@
 		"STATUS": "Paga",
 		"LAST_UPDATE": "2022-12-17T06:59:39.000-04:00",
 		"GATEWAY": "Pix",
-		"LINK": "https://www.mercadopago.com.br/payments/52*********/ticket?caller_id=2********&hash=********-****-****-****-************",
-		"SUBTOTAL": 321.07,
-		"TOTAL": 314.68,
+		"LINK": "https://www.mercadopago.com.br/payments/*********/********************",
+		"SUBTOTAL": 0,
+		"TOTAL": 0,
 		"FEES": 6.39,
 		"INSTALLMENTS": 1,
 		"CUSTOMER_NAME": "John Doe",
 		"CUSTOMER_EMAIL": "john_doe@teste.com",
-		"CUSTOMER_PHONE": "",
+		"CUSTOMER_PHONE": "+5527999998888",
 		"CUSTOMER_IDENTIFICATION": "12345678901"
 	}
 }
