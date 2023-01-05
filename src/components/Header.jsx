@@ -12,8 +12,8 @@ export default class Header extends Component {
           <Link to="/*" className="header-secondary">Providers</Link>
           <Link to="/*" className="header-secondary">Repositories</Link>
           <Link to="/*" className="header-secondary">Services</Link>
-          <Link to="/erp-api-documentation/" className="header-primary">Home</Link>
-          <Link to="/erp-api-documentation/docs" className="header-primary">Docs</Link>
+          <Link to="/erp-api-documentation/" className="header-home">Home</Link>
+          <Link to="/erp-api-documentation/docs" className="header-docs">Docs</Link>
         </div>
       </header>
     );
