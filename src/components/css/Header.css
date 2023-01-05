@@ -58,3 +58,8 @@
   box-shadow: var(--elevation-3);
   background-color: rgb(255, 135, 135);
 }
+
+.header-primary:active{
+  box-shadow: var(--elevation-3);
+  background-color: rgb(255, 177, 177);
+}
