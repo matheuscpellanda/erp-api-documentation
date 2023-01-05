@@ -54,18 +54,29 @@
 .home-get-started {
   padding: 15px;
   border-radius: 15px;
-  border: 1px solid black;
+  border: none;
   font-size: 15px;
   font-weight: 700;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: white;
   background-color: black;
   cursor: pointer;
+
+  transition-duration: 500ms;
+  transition-property: background-color, color;
+
+  /* transition-property: background-color; */
 }
 
 .home-get-started:hover {
-  background-color: white;
   color: black;
+  background-color: white;
+  box-shadow: var(--elevation-3);
+}
+
+.home-get-started:active {
+  background-color: rgb(65, 65, 65);
+  color: white;
 }
 
 .home-last-updated {

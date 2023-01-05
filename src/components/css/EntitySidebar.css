@@ -27,6 +27,10 @@
   background-color: rgb(230, 230, 230);  
 }
 
+.link-sidebar:active {
+  background-color: rgb(241, 241, 241);  
+}
+
 .selected {
   background-color: rgb(230, 230, 230);
 }
