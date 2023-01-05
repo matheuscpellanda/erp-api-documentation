@@ -42,25 +42,27 @@ export default class EntityCard extends Component {
                 <br />
                 <div className="entity-name"><h2>Properties:</h2></div>
                 <div className="entity-secondary">
-                  <p className="json-open-object">{'{'}</p>
-                  {
-                  properties.map((property) => (
-                    <div key={property.name} className="entity-properties">
-                      <p className="json-key-object">
-                        { property.name }
-                        :
-                      </p>
-                      <p className="json-value-object">
-                        { `<${property.type}>` }
-                        {' '}
-                        { property.values ? `${JSON.stringify(property.values).replaceAll(',', ', ').replaceAll('"', '\'')}` : null }
-                        {' '}
-                        ,
-                      </p>
-                    </div>
-                  ))
-                }
-                  <p className="json-open-object">{'}'}</p>
+                  <div key="properties" className="entity-values">
+                    <p className="json-open-object">{'{'}</p>
+                    {
+                    properties.map((property) => (
+                      <div key={property.name} className="entity-properties">
+                        <p className="json-key-object">
+                          { property.name }
+                          :
+                        </p>
+                        <p className="json-value-object">
+                          { `<${property.type}>` }
+                          {' '}
+                          { property.values ? `${JSON.stringify(property.values).replaceAll(',', ', ').replaceAll('"', '\'')}` : null }
+                          {' '}
+                          ,
+                        </p>
+                      </div>
+                    ))
+                  }
+                    <p className="json-open-object">{'}'}</p>
+                  </div>
                 </div>
               </div>
             )
@@ -73,25 +75,27 @@ export default class EntityCard extends Component {
                 <br />
                 <div className="entity-name"><h2>Objects Properties:</h2></div>
                 <div className="entity-secondary">
-                  <p className="json-open-object">{'{'}</p>
-                  {
-                  objectsProperties.map((property) => (
-                    <div key={property.name} className="entity-properties">
-                      <p className="json-key-object">
-                        { property.name }
-                        :
-                      </p>
-                      <p className="json-value-object">
-                        { `<${property.type}>` }
-                        {' '}
-                        { property.values ? `${JSON.stringify(property.values).replaceAll(',', ', ').replaceAll('"', '\'')}` : null }
-                        {' '}
-                        ,
-                      </p>
-                    </div>
-                  ))
-                }
-                  <p className="json-open-object">{'}'}</p>
+                  <div key="values" className="entity-values">
+                    <p className="json-open-object">{'{'}</p>
+                    {
+                    objectsProperties.map((property) => (
+                      <div key={property.name} className="entity-properties">
+                        <p className="json-key-object">
+                          { property.name }
+                          :
+                        </p>
+                        <p className="json-value-object">
+                          { `<${property.type}>` }
+                          {' '}
+                          { property.values ? `${JSON.stringify(property.values).replaceAll(',', ', ').replaceAll('"', '\'')}` : null }
+                          {' '}
+                          ,
+                        </p>
+                      </div>
+                    ))
+                  }
+                    <p className="json-open-object">{'}'}</p>
+                  </div>
                 </div>
               </div>
             )

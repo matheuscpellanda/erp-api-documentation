@@ -4,10 +4,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  border-radius: 0px;
-  background-color: rgba(209, 209, 209, 0.3);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
-  margin: 1vh auto;
+  margin: 1.5vh auto;
   box-sizing: border-box;
 }
 
@@ -21,21 +21,21 @@
 
 .entity-name h2 {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0 10px 0 0;
+  margin: 0;
   font-weight: 700;
   font-size: 15px;
   color: black;
-  width: 80px;
   text-align: start;
+  width: min-content;
 }
 
 .entity-type {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin-right: 10px;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
-  color: rgb(202, 0, 0);
-  font-style: italic;
+  color: rgb(209, 47, 47);
+  font-style: normal;
 }
 
 .entity-header {
@@ -44,24 +44,27 @@
 }
 
 .entity-values {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 15px;
-  margin: 0 5px;
-  font-weight: 500;
-  font-style: italic;
-  color: rgb(143, 229, 255);
+  font-family: monospace;
+  font-size: 13px;
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(178, 238, 151);
+  padding: 25px;
 }
 
 .entity-properties {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: monospace;
+  font-size: 13px;
+  margin: 0;
   display: flex;
   width: 100%;
 }
 
 .entity-secondary {
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 25px;
+  padding: 5px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -83,7 +86,7 @@
 }
 
 .json-open-object {
-  margin: 5px 20px;
+  margin: 5px 0;
   color: rgb(209, 209, 209);
   width: 100%;
   justify-content: center;
@@ -91,16 +94,16 @@
 }
 
 .json-key-object {
-  color: rgb(143, 229, 255);
-  margin: 5px 0 5px 60px;
+  color: rgb(255, 162, 108);
+  margin: 5px 0 5px 20px;
   justify-content: center;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: monospace;
 }
 
 .json-value-object {
-  color: rgb(255, 57, 57);
+  color: rgb(178, 238, 151);
   font-style: italic;
   width: 100%;
-  margin: auto 15px;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: auto 10px;
+  font-family: monospace;
 }
