@@ -10,10 +10,10 @@ export default class Content extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/erp-api-documentation/" component={Home} />
-        <Route exact path="/erp-api-documentation/entities" component={Entities} />
-        <Route exact path="/erp-api-documentation/entities/:entity" component={Entity} />
-        <Route exact path="/erp-api-documentation/docs" component={Documentations} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/entities" component={Entities} />
+        <Route exact path="/entities/:entity" component={Entity} />
+        <Route exact path="/docs" component={Documentations} />
         <Route path="*" component={NotFound} />
       </Switch>
     );

@@ -29,12 +29,12 @@ export default class Entities extends Component {
             </p>
             <hr />
             <div className="row">
-              <button type="button" className="button-previous-entity" onClick={() => { history.push('/erp-api-documentation/'); }}>
+              <button type="button" className="button-previous-entity" onClick={() => { history.push('/'); }}>
                 {'<'}
                 {' '}
                 Home
               </button>
-              <button type="button" className="button-next-entity" onClick={() => { history.push('/erp-api-documentation/entities/orders'); }}>
+              <button type="button" className="button-next-entity" onClick={() => { history.push('/entities/orders'); }}>
                 Orders
                 {' '}
                 {'>'}

@@ -6,7 +6,7 @@ import Content from './components/Content';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Content />
       </BrowserRouter>
     </div>

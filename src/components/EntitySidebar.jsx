@@ -35,7 +35,7 @@ export default class EntitySidebar extends Component {
             <Link
               key={entity}
               className={selected === entity.toLowerCase() ? 'link-sidebar selected' : 'link-sidebar'}
-              to={`/erp-api-documentation/entities/${entity.toLowerCase()}`}
+              to={`/entities/${entity.toLowerCase()}`}
             >
               { entity }
             </Link>
