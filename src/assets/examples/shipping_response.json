@@ -1,0 +1,38 @@
+{
+	"200": {
+		"code": 200,
+		"message": "OK",
+		"result": {
+			"ID": "*******************",
+			"PROTOCOL": "**********",
+			"PRICE": 35.28,
+			"COUPON": null,
+			"DISCOUNT": 1.9,
+			"INSURANCE": 0.00,
+			"DELIVERY_MIN": 3,
+			"DELIVERY_MAX": 4,
+			"STATUS": "Liberado",
+			"NOTE": "",
+			"TRACKING": "***********BR",
+			"SHIPPING_COMPANY": "Correios - PAC",
+			"ORDER_NUMBER": "********",
+			"CREATED_AT": "2023-01-16 17:34:24",
+			"DELIVERED_AT": "",
+			"PAID_AT": "2023-01-16 17:35:44",
+			"UPDATED_AT": "2023-01-16 17:36:18",
+			"POSTED_AT": ""
+		}
+	},
+	"400": {
+		"code": 400,
+		"message": "Bad request"
+	},
+	"401": {
+		"code": 401,
+		"message": "Unauthorized request"
+	},
+	"405": {
+		"code": 405,
+		"message": "Wrong Method"
+	}
+}
