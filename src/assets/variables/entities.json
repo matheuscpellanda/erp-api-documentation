@@ -10,7 +10,7 @@
     },
     {
       "name": "NUMBER",
-      "type": "number"
+      "type": "Integer"
     },
     {
       "name": "PLATFORM",
@@ -162,11 +162,11 @@
     },
     {
       "name": "SHIPPING_COST",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "SHIPPING_DISCOUNT",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "SHIPPING_TYPE",
@@ -215,7 +215,7 @@
         },
         {
           "name": "VALUE",
-          "type": "number"
+          "type": "Float"
         }
       ]
     },
@@ -278,7 +278,7 @@
         },
         {
           "name": "INSTALLMENTS",
-          "type": "number"
+          "type": "Integer"
         }
       ]
     },
@@ -288,15 +288,15 @@
     },
     {
       "name": "PAYMENT_AMOUNT",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "TOTAL_AMOUNT",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "DISCOUNTS",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "PRODUCT_ITEMS",
@@ -328,15 +328,15 @@
         },
         {
           "name": "PRICE",
-          "type": "number"
+          "type": "Float"
         },
         {
           "name": "PROMOTIONAL_PRICE",
-          "type": "number"
+          "type": "Float"
         },
         {
           "name": "QUANTITY",
-          "type": "number"
+          "type": "Integer"
         }
       ]
     }
@@ -399,31 +399,31 @@
         },
         {
           "name": "DEPTH",
-          "type": "number"
+          "type": "Float"
         },
         {
           "name": "HEIGHT",
-          "type": "number"
+          "type": "Float"
         },
         {
           "name": "WIDTH",
-          "type": "number"
+          "type": "Float"
         },
         {
           "name": "WEIGHT",
-          "type": "number"
+          "type": "Float"
         },
         {
           "name": "PRICE",
-          "type": "number"
+          "type": "Float"
         },
         {
           "name": "PROMOTIONAL_PRICE",
-          "type": "number"
+          "type": "Float"
         },
         {
           "name": "STOCK",
-          "type": "number"
+          "type": "Integer"
         },
         {
           "name": "MPN",
@@ -461,7 +461,7 @@
         },
         {
           "name": "POS",
-          "type": "number"
+          "type": "Integer"
         },
         {
           "name": "SRC",
@@ -559,31 +559,31 @@
     },
     {
       "name": "DEPTH",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "HEIGHT",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "WIDTH",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "WEIGHT",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "PRICE",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "PROMOTIONAL_PRICE",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "STOCK",
-      "type": "number"
+      "type": "Integer"
     },
     {
       "name": "MPN",
@@ -720,19 +720,19 @@
     },
     {
       "name": "SUBTOTAL",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "TOTAL",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "FEES",
-      "type": "number"
+      "type": "Float"
     },
     {
       "name": "INSTALLMENTS",
-      "type": "number"
+      "type": "Integer"
     },
     {
       "name": "CUSTOMER_NAME",
@@ -748,6 +748,86 @@
     },
     {
       "name": "CUSTOMER_IDENTIFICATION",
+      "type": "String"
+    }
+  ],
+  "shipping": [
+    {
+      "name": "ID",
+      "type": "String"
+    },
+    {
+      "name": "PROTOCOL",
+      "type": "String"
+    },
+    {
+      "name": "PRICE",
+      "type": "Float"
+    },
+    {
+      "name": "COUPON",
+      "type": "Float"
+    },
+    {
+      "name": "DISCOUNT",
+      "type": "Float"
+    },
+    {
+      "name": "INSURANCE",
+      "type": "Float"
+    },
+    {
+      "name": "DELIVERY_MIN",
+      "type": "Integer"
+    },
+    {
+      "name": "DELIVERY_MAX",
+      "type": "Integer"
+    },
+    {
+      "name": "STATUS",
+      "type": "String",
+      "values": [
+        "Liberado",
+        "Postado",
+        "Entregue",
+        "Não entregue"
+      ]
+    },
+    {
+      "name": "NOTE",
+      "type": "String"
+    },
+    {
+      "name": "TRACKING",
+      "type": "String"
+    },
+    {
+      "name": "SHIPPING_COMPANY",
+      "type": "String"
+    },
+    {
+      "name": "ORDER_NUMBER",
+      "type": "String"
+    },
+    {
+      "name": "CREATED_AT",
+      "type": "String"
+    },
+    {
+      "name": "DELIVERED_AT",
+      "type": "String"
+    },
+    {
+      "name": "PAID_AT",
+      "type": "String"
+    },
+    {
+      "name": "UPDATED_AT",
+      "type": "String"
+    },
+    {
+      "name": "POSTED_AT",
       "type": "String"
     }
   ]
