@@ -7,12 +7,11 @@
   border: 0.5em solid rgb(0, 0, 0, 0);
   padding: 25px !important;
   border-radius: 35px !important;
-  box-sizing: border-box !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  box-shadow: var(--elevation-3) !important;
-  width: 50vw !important;
-  max-height: 600px !important;
+  box-sizing: border-box;
+  overflow: auto;
+  box-shadow: var(--elevation-3);
+  width: 100%;
+  height: 93%;
 }
 
 .codebox:hover {

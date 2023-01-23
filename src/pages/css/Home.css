@@ -1,37 +1,56 @@
-:root {
-  --elevation-3: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  --elevation-1: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.12);
-}
-
 .home {
   margin-top: 0;
   background: rgb(255,255,255);
   display: flex;
   flex-direction: column;
+  z-index: 1;
+}
+
+.get-started {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  z-index: 1;
+  left: 50%;
 }
 
 .wallpaper {
-  background: linear-gradient(13deg, rgba(0,252,255,1) 0%, rgba(74,189,181,1) 16%, rgba(130,255,194,1) 56%, rgba(115,186,181,1) 87%, rgba(0,252,255,1) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   height: 100vh;
+  background-image: url('../../images/background.jpg');
+  filter: blur(2px) brightness(0.5);
+  background-size: cover;
 }
 
 .home-title {
   width: 100%;
-  height: 30vh;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-  font-size: 35px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 10vh auto 0 auto;
+  justify-content: flex-end;
+  font-size: 60px;
+  font-family: Rubik;
+  margin: 0 4vw 0 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
 }
 
-.home-title color {
-  color: red;
+.row-get-started {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  margin: 0 4vw 0 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
 }
 
 .column {
@@ -43,137 +62,36 @@
   gap: 50px;
 }
 
-.row-get-started {
-  width: 100%;
-  height: 15vh;
-  display: flex;
-  flex-direction: row;
-  margin: 5vh auto 30vh auto;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
 
 .home-get-started {
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 10px;
   border: none;
   font-size: 15px;
   font-weight: 700;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Rubik';
   color: white;
-  background-color: black;
+  background-color: var(--color-secondary);
+  box-shadow: var(--elevation-1);
   cursor: pointer;
-
-  transition-duration: 500ms;
-  transition-property: background-color, color;
-
-  /* transition-property: background-color; */
+  transition-duration: 300ms;
+  transition-property: box-shadow, opacity;
 }
 
 .home-get-started:hover {
-  color: black;
-  background-color: white;
   box-shadow: var(--elevation-3);
+  opacity: 0.8;
 }
 
 .home-get-started:active {
-  background-color: rgb(65, 65, 65);
-  color: white;
+  box-shadow: var(--elevation-1);
+  opacity: 1;
 }
 
 .home-last-updated {
   margin: 0 5px;
   font-size: 13px;
   font-weight: 600;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: black;
-}
-
-.row-example {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 0 auto 10vh auto;
-  box-sizing: border-box;
-}
-
-.row-images {
-  display: flex;
-  flex-direction: row;
-  width: 40vw;
-  overflow: auto;
-  box-sizing: border-box;
-  border-radius: 35px;
-  padding: 2vh 1vw;
-  border: 0.3em solid rgb(233, 233, 233);
-  box-shadow: var(--elevation-3);
-  background-color: rgb(233, 233, 233);
-}
-
-.image-example {
-  margin: auto 1vw;
-  width: 16.5vw;
-}
-
-.title-example {
-  margin: 8vh auto 5vh;
-  font-size: 50px;
-  font-weight: 700;
-  font-family: monospace;
-}
-
-.response-header {
-  margin: 0;
-  gap: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: monospace;
-}
-
-.response-header > button {
-  background-color: white;
-  color: #000;
-  border-radius: 15px;
-  border: none;
-  padding: 5px 15px;
-  font-family: monospace;
-  font-size: 20px;
-  font-weight: 600;
-  box-shadow: var(--elevation-3);
-  cursor: pointer;
-}
-
-.response-header > button:hover {
-  background-color: rgb(5, 90, 90);
-  color: white;
-}
-
-.response-header > button:active {
-  background-color: rgb(0, 114, 114);
-}
-
-.row-images::-webkit-scrollbar {
-  height: 1em;
-}
-
-.row-images::-webkit-scrollbar-track {
-  background: rgb(233, 233, 233);
-  border-radius: 35px;
-  margin-inline: 1em;
-}
-
-.row-images::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
-  border-radius: 35px;
-  height: 1em;
-}
-
-.row-images::-webkit-scrollbar-thumb:hover {
-  background: rgb(32, 32, 32);
+  font-family: 'Rubik';
+  color: rgb(195, 195, 195);
 }

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Documentations from '../pages/Documentations';
@@ -10,9 +11,10 @@ import Teste from '../pages/Teste';
 
 export default class Content extends Component {
   render() {
+    const { acao: ativaCor } = this.props;
     return (
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" render={() => <Home acao={ativaCor} />} />
         <Route exact path="/entities" component={Entities} />
         <Route exact path="/entities/:entity" component={Entity} />
         <Route exact path="/services" component={Services} />
@@ -24,3 +26,7 @@ export default class Content extends Component {
     );
   }
 }
+
+Content.propTypes = {
+  acao: PropTypes.bool.isRequired,
+};

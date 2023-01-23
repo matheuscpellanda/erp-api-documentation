@@ -1,76 +1,61 @@
-:root {
-  --elevation-3: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  --elevation-1: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.12);
-}
-
 .main-header {
-  height: 7vh;
-  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  min-height: 70px;
   width: 100vw;
-  background-color: rgba(255, 255, 255, 0.897);
-  box-shadow: var(--elevation-1);
   padding-left: 3vw;
   padding-right: 3vw;
   position: fixed;
   top: 0;
   box-sizing: border-box;
+  z-index: 2;
+  transition: all ease 0.5s;
 }
 
-.row {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.gap {
-  gap: 30px;
-}
-
-.header-home, .header-docs, .header-secondary {
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.header-home, .header-docs {
-  border-radius: 25px;
-  width: 5vw;
+.main-header.active {
+  background-color: rgb(255, 255, 255);
   box-shadow: var(--elevation-1);
 }
 
-.header-home {
-  background-color: rgb(137, 198, 255);
+.header-primary, .header-secondary {
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-family: Rubik;
+  padding: 10px;
+  text-decoration: none;
+  width: 5vw;
 }
 
-.header-docs {
-  background-color: rgb(137, 255, 143);
+.header-primary {
+  box-shadow: var(--elevation-3);
+  background-color: var(--color-secondary);
 }
 
-.header-home:hover{
+.header-primary:hover{
+  opacity: 0.9;
   box-shadow: var(--elevation-3);
 }
 
-.header-home:active{
-  background-color: rgb(156, 207, 255);
+.header-primary:active{
+  opacity: 1;
+  box-shadow: var(--elevation-1);
 }
 
-.header-docs:hover{
-  box-shadow: var(--elevation-3);
-}
-
-.header-docs:active{
-  background-color: rgb(184, 255, 187);
+.header-primary.active {
+  box-shadow: var(--elevation-1);
+  background-color: var(--color-secondary);
 }
 
 .header-secondary:hover {
-  background-color: rgb(230, 230, 230);
-  border-radius: 25px;
+  opacity: 0.5;
+}
+
+.header-secondary.active {
+  color: var(--color-secondary);
 }
 
 .header-secondary:active {
-  background-color: rgb(241, 241, 241);
-  border-radius: 25px;
+  opacity: 1;
 }
