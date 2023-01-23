@@ -1,0 +1,77 @@
+.subscribe {
+  border: 1px solid rgb(104, 104, 104);
+  border-radius: 15px;
+  box-sizing: border-box;
+  width: 96%;
+  margin: 10% auto 0;
+  padding: 15px;
+  background-color: var(--color-primary);
+  background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+}
+
+.subscribe > h1 {
+  font-family: 'Rubik';
+  font-size: 2rem;
+  color: white;
+  margin: 5% 0;
+  text-align: start;
+}
+
+.subscribe-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.subscribe-info > input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-family: 'Rubik';
+  font-weight: 500;
+}
+
+.subscribe-info > button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Rubik';
+  font-weight: 500;
+  background-color: white;
+  color: var(--color-secondary);
+}
+
+@media screen and (min-width: 781px) {
+  
+  .subscribe {
+    width: 50%;
+    margin: 10vh auto;
+    padding: 4vh 3vw;
+    height: 40vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subscribe-info {
+    justify-content: flex-start;
+    margin: 1vh 0;
+  }
+  
+  .subscribe > h1 {
+    font-size: 3rem;
+    margin: 1vh 0;
+  }
+
+  .subscribe-info > button {
+    font-size: 2rem;
+  }
+
+  .subscribe-info > input {
+    width: 40%;
+    font-size: 2rem;
+  }
+
+}

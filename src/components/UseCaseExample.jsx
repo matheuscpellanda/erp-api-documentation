@@ -15,7 +15,7 @@ export default class UseCaseExample extends Component {
           <img className="use-case-image" src={image} alt="Exemplo código 03" />
           <div className="use-case-responses">
             <div className="use-case-response-header">
-              Response Example
+              <h1 className="use-case-response-title">Response Example</h1>
               <button type="button" onClick={showResponse}>200</button>
               <button type="button" onClick={showResponse}>400</button>
               <button type="button" onClick={showResponse}>401</button>

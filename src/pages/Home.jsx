@@ -15,6 +15,8 @@ import paymentResponse from '../assets/examples/payment_response.json';
 import orderCreationResponse from '../assets/examples/order_creation_response.json';
 import shippingTrackingResponse from '../assets/examples/shipping_response.json';
 import UseCaseExample from '../components/UseCaseExample';
+import Subscribe from '../components/Subscribe';
+import ButtonActivateHeader from '../components/ButtonActivateHeader';
 
 const selectPaymentResponse = (code) => {
   switch (code) {
@@ -67,6 +69,8 @@ export default class Home extends Component {
     this.state = {
       showPaymentResponse: '200',
       showOrderCreationResponse: '200',
+      menuState: 'closed',
+      activeMenuBtn: window.innerWidth <= 780,
     };
   }
 
@@ -88,17 +92,61 @@ export default class Home extends Component {
     });
   };
 
+  buttonMenu = () => {
+    const menu = document.getElementsByClassName('main-header')[0];
+    const btnMenu = document.getElementById('menu-button');
+    let opened = false;
+    if (menu.style.right === '0px') {
+      opened = true;
+    }
+    this.setState({
+      menuState: opened ? 'closed' : 'opened',
+    });
+    if (opened) {
+      btnMenu.style.right = '5px';
+      menu.style.right = '-50%';
+    } else {
+      const movement = window.innerWidth - 5 - 50;
+      btnMenu.style.right = `${movement}px`;
+      menu.style.right = '0px';
+    }
+  };
+
+  closeMenu = () => {
+    const menu = document.getElementsByClassName('main-header')[0];
+    const btnMenu = document.getElementById('menu-button');
+    this.setState({
+      menuState: 'closed',
+    });
+    btnMenu.style.right = '5px';
+    menu.style.right = '-50%';
+  };
+
   render() {
     const {
       showPaymentResponse,
       showOrderCreationResponse,
       showShippingTrackingResponse,
+      menuState,
+      activeMenuBtn,
     } = this.state;
     const { acao: ativaCor } = this.props;
     return (
       <>
         <Header acao={ativaCor} />
-        <div className="home">
+        <ButtonActivateHeader
+          onClick={this.buttonMenu}
+          menu-state={menuState}
+        />
+        <div
+          className="home"
+          onFocus={() => {
+            if (activeMenuBtn) this.closeMenu();
+          }}
+          onPointerMove={() => {
+            if (activeMenuBtn) this.closeMenu();
+          }}
+        >
           <span className="get-started">
             <h1 className="home-title">A simple way</h1>
             <h1 className="home-title">to organize business</h1>
@@ -127,6 +175,7 @@ export default class Home extends Component {
             image={example07}
           />
         </div>
+        <Subscribe />
         <Footer />
       </>
     );

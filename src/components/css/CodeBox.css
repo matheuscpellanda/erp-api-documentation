@@ -5,13 +5,14 @@
 
 .codebox {
   border: 0.5em solid rgb(0, 0, 0, 0);
-  padding: 25px !important;
+  padding: 25px 10px !important;
   border-radius: 35px !important;
   box-sizing: border-box;
   overflow: auto;
   box-shadow: var(--elevation-3);
-  width: 100%;
+  width: 100% !important;
   height: 93%;
+  font-size: 0.7rem !important;
 }
 
 .codebox:hover {
@@ -36,4 +37,11 @@
 
 .codebox::-webkit-scrollbar-thumb:hover {
   background: rgb(71, 71, 71) !important;
+}
+
+@media screen and (min-width: 781px) {
+  .codebox {
+    height: 100% !important;
+    font-size: 1rem !important;
+  }
 }

@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     function posicaoScroll() {
       const porcScrollY = (window.scrollY / window.innerHeight) * 100;
-      if (porcScrollY > 94) {
+      if (porcScrollY > 90) {
         setAtivaCor(true);
       } else {
         setAtivaCor(false);

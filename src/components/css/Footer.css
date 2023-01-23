@@ -4,7 +4,7 @@
 
 footer {
   display: flex;
-  width: 95vw;
+  width: 100%;
   background-color: white;
   height: 5vh;
   border-top: 0.1vh solid rgb(209, 209, 209);
@@ -12,6 +12,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  padding: 0 2vw;
 }
 
 footer .row {
@@ -20,15 +21,16 @@ footer .row {
   align-items: center;
   justify-content: flex-end;
   padding: 0;
+  box-sizing: border-box;
 }
 
-span {
+footer span {
   font-size: 12px;
   margin: 0;
   padding: 0;
   color: grey;
   font-weight: 400;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Rubik';
 }
 
 footer img {
