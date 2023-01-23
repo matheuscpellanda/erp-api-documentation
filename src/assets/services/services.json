@@ -1,0 +1,259 @@
+{
+  "aassdd": [
+    {
+      "name": "ID",
+      "type": "String"
+    },
+    {
+      "name": "PLATFORM",
+      "type": "String",
+      "values": [
+        "nuvemshop",
+        "mercadolivre",
+        "store"
+      ]
+    },
+    {
+      "name": "VARIANTS",
+      "type": "Object<Object>",
+      "properties": [
+        {
+          "name": "${SKU}",
+          "type": "Object"
+        }
+      ],
+      "objects_properties": [
+        {
+          "name": "ID",
+          "type": "String"
+        },
+        {
+          "name": "NAME",
+          "type": "String"
+        },
+        {
+          "name": "PRODUCT_ID",
+          "type": "String"
+        },
+        {
+          "name": "SKU",
+          "type": "String"
+        },
+        {
+          "name": "IMAGE_ID",
+          "type": "String"
+        },
+        {
+          "name": "INFINITE_STOCK",
+          "type": "bool"
+        },
+        {
+          "name": "AGE_GROUP",
+          "type": "String"
+        },
+        {
+          "name": "GENDER",
+          "type": "String"
+        },
+        {
+          "name": "DEPTH",
+          "type": "Float"
+        },
+        {
+          "name": "HEIGHT",
+          "type": "Float"
+        },
+        {
+          "name": "WIDTH",
+          "type": "Float"
+        },
+        {
+          "name": "WEIGHT",
+          "type": "Float"
+        },
+        {
+          "name": "PRICE",
+          "type": "Float"
+        },
+        {
+          "name": "PROMOTIONAL_PRICE",
+          "type": "Float"
+        },
+        {
+          "name": "STOCK",
+          "type": "Integer"
+        },
+        {
+          "name": "MPN",
+          "type": "String"
+        },
+        {
+          "name": "EAN_GTIN",
+          "type": "String"
+        },
+        {
+          "name": "LAST_UPDATE",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "DESCRIPTION",
+      "type": "String"
+    },
+    {
+      "name": "NAME",
+      "type": "String"
+    },
+    {
+      "name": "BRAND",
+      "type": "String"
+    },
+    {
+      "name": "IMAGES",
+      "type": "Object<Object>",
+      "objects_properties": [
+        {
+          "name": "ID",
+          "type": "String"
+        },
+        {
+          "name": "POS",
+          "type": "Integer"
+        },
+        {
+          "name": "SRC",
+          "type": "String"
+        }
+      ],
+      "properties": [
+        {
+          "name": "${IMAGE_ID}",
+          "type": "Object"
+        }
+      ]
+    },
+    {
+      "name": "TAGS",
+      "type": "Array<String>"
+    },
+    {
+      "name": "SEO",
+      "type": "Object",
+      "properties":[
+        {
+          "name": "SEO_TITLE",
+          "type": "String"
+        },
+        {
+          "name": "SEO_DESCRIPTION",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "PUBLISHED",
+      "type": "bool"
+    },
+    {
+      "name": "FREE_SHIPPING",
+      "type": "bool"
+    },
+    {
+      "name": "URL",
+      "type": "String"
+    },
+    {
+      "name": "LISTING_TYPE",
+      "type": "String",
+      "values": [
+        " ",
+        "Grátis",
+        "Clássico",
+        "Bronze",
+        "Prata",
+        "Ouro",
+        "Premium",
+        "Diamante"
+      ]
+    },
+    {
+      "name": "CATEGORIES_ID",
+      "type": "Array<String>"
+    }
+  ],
+  "ccvvbb": [
+    {
+      "name": "ID",
+      "type": "String"
+    },
+    {
+      "name": "NAME",
+      "type": "String"
+    },
+    {
+      "name": "PRODUCT_ID",
+      "type": "String"
+    },
+    {
+      "name": "SKU",
+      "type": "String"
+    },
+    {
+      "name": "IMAGE_ID",
+      "type": "String"
+    },
+    {
+      "name": "INFINITE_STOCK",
+      "type": "bool"
+    },
+    {
+      "name": "AGE_GROUP",
+      "type": "String"
+    },
+    {
+      "name": "GENDER",
+      "type": "String"
+    },
+    {
+      "name": "DEPTH",
+      "type": "Float"
+    },
+    {
+      "name": "HEIGHT",
+      "type": "Float"
+    },
+    {
+      "name": "WIDTH",
+      "type": "Float"
+    },
+    {
+      "name": "WEIGHT",
+      "type": "Float"
+    },
+    {
+      "name": "PRICE",
+      "type": "Float"
+    },
+    {
+      "name": "PROMOTIONAL_PRICE",
+      "type": "Float"
+    },
+    {
+      "name": "STOCK",
+      "type": "Integer"
+    },
+    {
+      "name": "MPN",
+      "type": "String"
+    },
+    {
+      "name": "EAN_GTIN",
+      "type": "String"
+    },
+    {
+      "name": "LAST_UPDATE",
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+:root {
+  --elevation-3: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  --elevation-1: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+* {
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.services {
+  display: flex;
+  margin-top: 75px;
+  background: white;
+}
+
+article {
+  display: flex;
+  width: 100%;
+  margin-top: 3vh;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+article span {
+  width: 70%;
+  text-align: start;
+}
+
+article h1 {
+  font-size: 50px;
+  margin: 0;
+  font-family: monospace;
+  font-weight: 800;
+}
+
+article hr {
+  color: #000;
+  width: 70%;
+}
+
+article .row {
+  height: auto;
+  width: 70%;
+  justify-content: space-between;
+}
+
+article p {
+  width: 68%;
+  text-align: start;
+  font-weight: 500;
+  font-size: 17px;
+  font-family: monospace;
+  margin: 15px 0;
+}
+
+article section {
+  width: 48%;
+}
+
+.entities-variables {
+  width: 80%;
+  margin: 4vh auto;
+  background-color: rgb(209, 209, 209);
+  border-radius: 35px;
+  box-shadow: var(--elevation-3);
+  padding: 30px 5px;
+}
+
+.button-next-entity, .button-previous-entity {
+  width: 155px;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 15px;
+  margin-top: 1vh;
+}
+
+.button-next-entity {
+  background-color: aquamarine;
+}
+
+.button-next-entity:hover {
+  background-color: rgb(168, 255, 226);
+}
+
+.button-next-entity:active {
+  background-color: rgb(108, 255, 206);
+}
+
+.button-previous-entity {
+  background-color: rgb(209, 209, 209);
+}
+
+.button-previous-entity:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.button-previous-entity:active {
+  background-color: rgb(196, 196, 196);
+}

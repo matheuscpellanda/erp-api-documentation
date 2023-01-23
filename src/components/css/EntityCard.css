@@ -51,6 +51,8 @@
   font-style: normal;
   color: rgb(178, 238, 151);
   padding: 25px;
+  width: 100%;
+  text-align: justify;
 }
 
 .entity-properties {
@@ -98,6 +100,7 @@
   margin: 5px 0 5px 20px;
   justify-content: center;
   font-family: monospace;
+  width: fit-content;
 }
 
 .json-value-object {

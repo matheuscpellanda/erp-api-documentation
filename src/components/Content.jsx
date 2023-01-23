@@ -5,6 +5,8 @@ import Entities from '../pages/Entities';
 import Entity from '../pages/Entity';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
+import Services from '../pages/Services';
+import Teste from '../pages/Teste';
 
 export default class Content extends Component {
   render() {
@@ -13,7 +15,10 @@ export default class Content extends Component {
         <Route exact path="/" component={Home} />
         <Route exact path="/entities" component={Entities} />
         <Route exact path="/entities/:entity" component={Entity} />
+        <Route exact path="/services" component={Services} />
+        <Route exact path="/services/:service" component={Services} />
         <Route exact path="/docs" component={Documentations} />
+        <Route exact path="/teste" component={Teste} />
         <Route path="*" component={NotFound} />
       </Switch>
     );

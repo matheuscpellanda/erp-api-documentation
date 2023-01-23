@@ -7,10 +7,10 @@
   height: 7vh;
   min-height: 60px;
   width: 100vw;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.897);
+  box-shadow: var(--elevation-1);
   padding-left: 3vw;
   padding-right: 3vw;
-  border-bottom: 0.1em solid rgb(243, 243, 243);
   position: fixed;
   top: 0;
   box-sizing: border-box;
