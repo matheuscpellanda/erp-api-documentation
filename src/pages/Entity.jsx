@@ -64,7 +64,7 @@ export default class Entity extends Component {
     const nextPageTitle = this.buildTitle(pageIndex + 1);
     return (
       <>
-        <Header />
+        <Header acao />
         <div className="entities">
           <EntitySidebar selected={entity} />
           <article>

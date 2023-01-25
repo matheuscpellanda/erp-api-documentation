@@ -14,7 +14,7 @@ export default class Content extends Component {
     const { acao: ativaCor } = this.props;
     return (
       <Switch>
-        <Route exact path="/" render={() => <Home acao={ativaCor} />} />
+        <Route exact path="/" render={(props) => <Home acao={ativaCor} {...props} />} />
         <Route exact path="/entities" component={Entities} />
         <Route exact path="/entities/:entity" component={Entity} />
         <Route exact path="/services" component={Services} />

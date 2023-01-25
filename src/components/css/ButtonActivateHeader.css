@@ -1,15 +1,16 @@
 #menu-button {
+  margin: 20px 5vw 0 0;
   background-color: white;
   border: none;
-  position: fixed;
-  z-index: 2;
+  position: relative;
+  z-index: 1;
   color: white;
   fill: white;
-  top: 5px;
-  right: 5px;
   padding: 10px;
-  width: 50px;
-  height: 50px;
+  width: 13vw;
+  min-width: 13vw;
+  min-height: 13vw;
+  height: 13vw;
   box-shadow: var(--elevation-3);
   border-radius: 50%;
   display: flex;

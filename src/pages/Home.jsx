@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import './css/Home.css';
@@ -16,7 +17,6 @@ import orderCreationResponse from '../assets/examples/order_creation_response.js
 import shippingTrackingResponse from '../assets/examples/shipping_response.json';
 import UseCaseExample from '../components/UseCaseExample';
 import Subscribe from '../components/Subscribe';
-import ButtonActivateHeader from '../components/ButtonActivateHeader';
 
 const selectPaymentResponse = (code) => {
   switch (code) {
@@ -64,13 +64,61 @@ const selectShippingTrackingResponse = (code) => {
 };
 
 export default class Home extends Component {
+  animationTitles = {
+    className: 'home-title',
+    whileInView: () => {
+      const { firstOpen } = this.state;
+      if (!firstOpen) {
+        this.setState({
+          firstOpen: true,
+        });
+      }
+    },
+    transition: { type: 'tween', duration: 2 },
+    initial: { x: -200 },
+    animate: () => {
+      const { firstOpen } = this.state;
+      let resp = {};
+      if (firstOpen) {
+        resp = { x: [-200, 0] };
+      }
+      return resp;
+    },
+  };
+
+  animationButtonStarted = {
+    className: 'button-get-started',
+    animate: () => {
+      const { firstOpen } = this.state;
+      let resp = {};
+      if (firstOpen) {
+        resp = {
+          scale: 1,
+          x: [40, 0],
+        };
+        return resp;
+      }
+      return resp;
+    },
+    transition: { type: 'tween', duration: 2 },
+    whileHover: () => ({ scale: 1.1 }),
+    initial: { x: 40 },
+    onClick: () => {
+      const { history } = this.props;
+      setTimeout(() => {
+        history.push('/entities');
+      }, 150);
+    },
+  };
+
   constructor(props) {
     super(props);
     this.state = {
       showPaymentResponse: '200',
       showOrderCreationResponse: '200',
+      firstOpen: undefined,
       menuState: 'closed',
-      activeMenuBtn: window.innerWidth <= 780,
+      toCloseMenu: false,
     };
   }
 
@@ -92,34 +140,10 @@ export default class Home extends Component {
     });
   };
 
-  buttonMenu = () => {
-    const menu = document.getElementsByClassName('main-header')[0];
-    const btnMenu = document.getElementById('menu-button');
-    let opened = false;
-    if (menu.style.right === '0px') {
-      opened = true;
-    }
+  openMenu = () => {
     this.setState({
-      menuState: opened ? 'closed' : 'opened',
+      menuState: 'opened',
     });
-    if (opened) {
-      btnMenu.style.right = '5px';
-      menu.style.right = '-50%';
-    } else {
-      const movement = window.innerWidth - 5 - 50;
-      btnMenu.style.right = `${movement}px`;
-      menu.style.right = '0px';
-    }
-  };
-
-  closeMenu = () => {
-    const menu = document.getElementsByClassName('main-header')[0];
-    const btnMenu = document.getElementById('menu-button');
-    this.setState({
-      menuState: 'closed',
-    });
-    btnMenu.style.right = '5px';
-    menu.style.right = '-50%';
   };
 
   render() {
@@ -128,48 +152,60 @@ export default class Home extends Component {
       showOrderCreationResponse,
       showShippingTrackingResponse,
       menuState,
-      activeMenuBtn,
+      toCloseMenu,
     } = this.state;
     const { acao: ativaCor } = this.props;
     return (
       <>
-        <Header acao={ativaCor} />
-        <ButtonActivateHeader
-          onClick={this.buttonMenu}
-          menu-state={menuState}
-        />
+        <Header acao={ativaCor} openMenu={this.openMenu} toCloseMenu={toCloseMenu} />
         <div
           className="home"
           onFocus={() => {
-            if (activeMenuBtn) this.closeMenu();
+            if (menuState === 'opened') this.setState({ toCloseMenu: true });
           }}
           onPointerMove={() => {
-            if (activeMenuBtn) this.closeMenu();
+            if (menuState === 'opened') this.setState({ toCloseMenu: true });
           }}
         >
           <span className="get-started">
-            <h1 className="home-title">A simple way</h1>
-            <h1 className="home-title">to organize business</h1>
+            <motion.h1
+              {...this.animationTitles}
+            >
+              A simple way
+            </motion.h1>
+            <motion.h1
+              {...this.animationTitles}
+            >
+              to organize business
+            </motion.h1>
             <div className="row-get-started">
-              <h2 className="home-last-updated">Last Update: 23/01/2023</h2>
-              <button type="button" className="home-get-started">Get Started</button>
+              <motion.h2
+                {...{ ...this.animationTitles, className: 'home-last-updated' }}
+              >
+                Last Update: 23/01/2023
+              </motion.h2>
+              <motion.button
+                {...this.animationButtonStarted}
+              >
+                Get Started
+              </motion.button>
             </div>
           </span>
           <div className="wallpaper" />
           <UseCaseExample
-            title="Order"
+            title="Order Creation"
             data={selectOrderCreationResponse(showOrderCreationResponse)}
             showResponse={this.showResponseOrderCreation}
             image={example03}
           />
           <UseCaseExample
-            title="Payment"
+            title="Payment Check"
             data={selectPaymentResponse(showPaymentResponse)}
             showResponse={this.showResponsePayment}
             image={example01}
           />
           <UseCaseExample
-            title="Shipping"
+            title="Shipping Tracking"
             data={selectShippingTrackingResponse(showShippingTrackingResponse)}
             showResponse={this.showResponseShippingTracking}
             image={example07}
@@ -184,4 +220,5 @@ export default class Home extends Component {
 
 Home.propTypes = {
   acao: PropTypes.bool.isRequired,
+  history: PropTypes.shape().isRequired,
 };

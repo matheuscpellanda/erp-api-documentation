@@ -11,7 +11,7 @@ export default class Entities extends Component {
     const { history } = this.props;
     return (
       <>
-        <Header />
+        <Header acao />
         <div className="entities">
           <EntitySidebar selected="none" />
           <article>
