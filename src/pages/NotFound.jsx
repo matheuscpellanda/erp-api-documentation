@@ -14,7 +14,7 @@ export default class NotFound extends Component {
   render() {
     return (
       <>
-        <Header />
+        <Header acao />
         <div className="not-found">
           <div className="lootie">
             <Player

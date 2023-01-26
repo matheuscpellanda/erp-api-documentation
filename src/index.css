@@ -5,6 +5,7 @@
   --elevation-1: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.12);
   --color-primary: rgb(0,127,126);
   --color-secondary: rgb(0,46,72);
+  --default-gradient: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
 }
 
 body {

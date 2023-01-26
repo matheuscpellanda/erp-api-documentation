@@ -101,7 +101,7 @@ export default class Home extends Component {
       return resp;
     },
     transition: { type: 'tween', duration: 2 },
-    whileHover: () => ({ scale: 1.1 }),
+    whileHover: () => ({ scale: 1.1, transition: { duration: 0.2 } }),
     initial: { x: 40 },
     onClick: () => {
       const { history } = this.props;
@@ -140,12 +140,6 @@ export default class Home extends Component {
     });
   };
 
-  openMenu = () => {
-    this.setState({
-      menuState: 'opened',
-    });
-  };
-
   render() {
     const {
       showPaymentResponse,
@@ -157,7 +151,7 @@ export default class Home extends Component {
     const { acao: ativaCor } = this.props;
     return (
       <>
-        <Header acao={ativaCor} openMenu={this.openMenu} toCloseMenu={toCloseMenu} />
+        <Header acao={ativaCor} openMenu={() => { this.setState({ menuState: 'opened' }); }} toCloseMenu={toCloseMenu} />
         <div
           className="home"
           onFocus={() => {

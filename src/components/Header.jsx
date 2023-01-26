@@ -15,23 +15,30 @@ export default class Header extends Component {
 
   openMenu = () => {
     const menu = document.getElementsByClassName('menu')[0];
+    const mainMenu = document.getElementsByClassName('main-header')[0];
     this.setState({
       menuState: 'opened',
     });
-    // menu.style.right = '0';
     menu.style.left = '0';
     menu.style.width = '100vw';
     menu.style.height = '100vh';
+    menu.style['justify-content'] = 'flex-end';
+    mainMenu.style.display = 'flex';
   };
 
   closeMenu = () => {
     const menu = document.getElementsByClassName('menu')[0];
+    const mainMenu = document.getElementsByClassName('main-header')[0];
     this.setState({
       menuState: 'closed',
     });
-    menu.style.left = '82vw';
-    menu.style.width = '65vw';
-    setTimeout(() => { menu.style.height = '10vh'; }, 500);
+    menu.style.left = 'calc(100vw - 80px)';
+    menu.style.width = 'calc(47vw + 80px)';
+    setTimeout(() => {
+      menu.style.height = '80px';
+      menu.style['justify-content'] = 'flex-start';
+      mainMenu.style.display = 'none';
+    }, 500);
   };
 
   render() {
@@ -73,7 +80,11 @@ export default class Header extends Component {
   }
 }
 
+Header.defaultProps = {
+  toCloseMenu: false,
+};
+
 Header.propTypes = {
   acao: PropTypes.bool.isRequired,
-  toCloseMenu: PropTypes.bool.isRequired,
+  toCloseMenu: PropTypes.bool,
 };

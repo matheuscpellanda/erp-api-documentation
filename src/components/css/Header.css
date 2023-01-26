@@ -1,13 +1,13 @@
 .menu {
   display: flex;
-  height: 10vh;
-  width: 65vw;
+  height: 80px;
+  width: calc(47vw + 80px);
   background-color: transparent;
   position: fixed;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
   top: 0;
-  left: 82vw;
+  left: calc(100vw - 80px);
   z-index: 2;
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +17,7 @@
 }
 
 .main-header {
-  display: flex;
+  display: none;
   z-index: 3;
   flex-direction: column;
   position: relative;
@@ -63,6 +63,7 @@
 
 @media screen and (min-width: 781px) {
   .main-header {
+    display: flex;
     background-color: transparent;
     box-shadow: none;
     flex-direction: row;

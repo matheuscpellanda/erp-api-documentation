@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "title": "Flowchart",
+    "content": [
+      {
+        "name": "Products Update",
+        "description": "Demonstrates the process behind Products changes.",
+        "path": "/services/"
+      },
+      {
+        "name": "Orders Update",
+        "description": "Used to make Products changes.",
+        "path": "/services/"
+      },
+      {
+        "name": "Orders Creation",
+        "description": "Used to make Products changes.",
+        "path": "/services/"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Entities",
+    "content": [
+      {
+        "name": "Order",
+        "description": "Used to make Products changes.",
+        "path": "/entities/orders"
+      },
+      {
+        "name": "Product",
+        "description": "Used to make Products changes.",
+        "path": "/entities/products"
+      }
+    ]
+  }
+]
