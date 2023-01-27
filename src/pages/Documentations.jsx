@@ -1,43 +1,21 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import './css/Documentations.css';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import DocumentationBox from '../components/Documentations/DocumentationCategory';
+import { Header, Footer } from '../components';
+import DocumentationCategory from '../components/Documentations';
 import documentationJson from '../assets/documentations/documentations.json';
 
 export default class Documentations extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menuState: 'closed',
-      toCloseMenu: false,
-    };
-  }
-
   componentDidMount() {
     window.scroll(0, 0);
   }
 
   render() {
-    const { menuState, toCloseMenu } = this.state;
     const { history } = this.props;
     return (
       <>
-        <Header
-          acao
-          openMenu={() => { this.setState({ menuState: 'opened' }); }}
-          toCloseMenu={toCloseMenu}
-        />
-        <div
-          className="documentations"
-          onFocus={() => {
-            if (menuState === 'opened') this.setState({ toCloseMenu: true });
-          }}
-          onPointerMove={() => {
-            if (menuState === 'opened') this.setState({ toCloseMenu: true });
-          }}
-        >
+        <Header acao />
+        <div className="documentations">
           <span className="label">Documentations</span>
           <div className="doc-primary">
             <div className="doc-resume">
@@ -79,7 +57,7 @@ export default class Documentations extends Component {
           <hr className="doc-separator" />
           {
             documentationJson.map((obj) => (
-              <DocumentationBox key={obj.id} data={obj} history={history} />))
+              <DocumentationCategory key={obj.id} data={obj} history={history} />))
           }
         </div>
         <Footer />

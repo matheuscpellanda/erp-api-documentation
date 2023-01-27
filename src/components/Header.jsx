@@ -42,9 +42,8 @@ export default class Header extends Component {
   };
 
   render() {
-    const { acao: ativaCor, toCloseMenu } = this.props;
+    const { acao: ativaCor } = this.props;
     const { menuState } = this.state;
-    if (toCloseMenu) this.closeMenu();
     return (
       <div
         className="menu"
@@ -80,11 +79,6 @@ export default class Header extends Component {
   }
 }
 
-Header.defaultProps = {
-  toCloseMenu: false,
-};
-
 Header.propTypes = {
   acao: PropTypes.bool.isRequired,
-  toCloseMenu: PropTypes.bool,
 };

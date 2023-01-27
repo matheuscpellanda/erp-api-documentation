@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './css/DocumentationBox.css';
 
-export default class DocumentationBox extends Component {
-  boxAnimation = {
+function DocumentationBox({ content: { name, description, path }, history }) {
+  const [toShow, setShow] = useState(false);
+  const [showed, setShowed] = useState(false);
+  const [clicked, setClicked] = useState(false);
+
+  const boxAnimation = {
     className: 'documentation-box',
+    initial: { x: -300 },
     whileHover: () => {
-      if (window.innerWidth) {
+      if (window.innerWidth >= 781 && !clicked) {
         return {
           scale: 1.1,
           background: 'var(--default-gradient)',
@@ -17,36 +22,42 @@ export default class DocumentationBox extends Component {
       }
       return {};
     },
-    onClick: () => {
-      const { history, content: { path } } = this.props;
-      this.setState({ clicked: true }, () => {
-        setTimeout(() => {
-          window.scroll(0, 0);
-          history.push(path);
-        }, 150);
-      });
-    },
-    initial: { x: -200 },
     whileInView: () => {
-      const { toOpen } = this.state;
-      if (!toOpen) {
-        this.setState({ toOpen: true });
+      if (!toShow) {
+        setShow(true);
+        setTimeout(() => {
+          setShowed(true);
+        }, 700);
       }
     },
+    onClick: async () => {
+      setClicked(true);
+      setTimeout(() => {
+        window.scroll(0, 0);
+        history.push(path);
+      }, 150);
+    },
     animate: () => {
-      const { toOpen, clicked } = this.state;
       if (clicked) {
         return {
-          scale: 1.2,
+          scale: 1.3,
           background: 'var(--default-gradient)',
           color: 'rgb(255, 255, 255)',
           x: 0,
           transition: { duration: 0.15 },
         };
       }
-      if (toOpen) {
+      if (showed) {
         return {
-          x: [-200, 0],
+          scale: 1,
+          x: 0,
+          transition: { duration: 0.15 },
+        };
+      }
+      if (toShow) {
+        return {
+          scale: 1,
+          x: [-300, 0],
           transition: { duration: 0.7 },
         };
       }
@@ -54,26 +65,17 @@ export default class DocumentationBox extends Component {
     },
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      toOpen: false,
-      clicked: false,
-    };
-  }
-
-  render() {
-    const { content: { name, description } } = this.props;
-    return (
-      <motion.div {...this.boxAnimation}>
-        <h1 className="box-title">{name}</h1>
-        <h2 className="box-subtitle">{description}</h2>
-        <hr className="doc-separator" />
-        <p>Click to see more details</p>
-      </motion.div>
-    );
-  }
+  return (
+    <motion.div {...boxAnimation}>
+      <h1 className="box-title">{name}</h1>
+      <h2 className="box-subtitle">{description}</h2>
+      <hr className="doc-separator" />
+      <p>Click to see more details</p>
+    </motion.div>
+  );
 }
+
+export default DocumentationBox;
 
 DocumentationBox.propTypes = {
   content: PropTypes.shape({

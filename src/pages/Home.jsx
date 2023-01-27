@@ -1,22 +1,19 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { motion } from 'framer-motion';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import {
+  Header,
+  Footer,
+  Subscribe,
+  UseCaseExample,
+} from '../components';
 import './css/Home.css';
 import example01 from '../images/example_01.png';
-// import example02 from '../images/example_02.png';
 import example03 from '../images/example_03.png';
-// import example04 from '../images/example_04.png';
-// import example05 from '../images/example_05.png';
-// import example06 from '../images/example_06.png';
 import example07 from '../images/example_07.png';
-// import example08 from '../images/example_08.png';
 import paymentResponse from '../assets/examples/payment_response.json';
 import orderCreationResponse from '../assets/examples/order_creation_response.json';
 import shippingTrackingResponse from '../assets/examples/shipping_response.json';
-import UseCaseExample from '../components/UseCaseExample';
-import Subscribe from '../components/Subscribe';
 
 const selectPaymentResponse = (code) => {
   switch (code) {

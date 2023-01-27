@@ -1,604 +1,623 @@
-{
-  "orders": [
-    {
-      "name": "ID",
-      "type": "String"
-    },
-    {
-      "name": "TOKEN",
-      "type": "String"
-    },
-    {
-      "name": "NUMBER",
-      "type": "Integer"
-    },
-    {
-      "name": "PLATFORM",
-      "type": "String",
-      "values": [
-        "nuvemshop",
-        "mercadolivre",
-        "store"
-      ]
-    },
-    {
-      "name": "STOREFRONT",
-      "type": "String",
-      "values": [
-        "site",
-        "manual",
-        "mobile",
-        "local"
-      ]
-    },
-    {
-      "name": "STATUS",
-      "type": "String",
-      "values": [
-        "Pagamento",
-        "Embalagem",
-        "Envio",
-        "Entrega",
-        "Concluído",
-        "Cancelado",
-        "Devolvido",
-        "Recusado"
-      ]
-    },
-    {
-      "name": "NOTES",
-      "type": "String"
-    },
-    {
-      "name": "LAST_UPDATE",
-      "type": "String"
-    },
-    {
-      "name": "CREATED_AT",
-      "type": "String"
-    },
-    {
-      "name": "CUSTOMER_ID",
-      "type": "String"
-    },
-    {
-      "name": "CUSTOMER_NAME",
-      "type": "String"
-    },
-    {
-      "name": "CUSTOMER_EMAIL",
-      "type": "String"
-    },
-    {
-      "name": "CUSTOMER_IDENTIFICATION",
-      "type": "String"
-    },
-    {
-      "name": "CUSTOMER_PHONE",
-      "type": "String"
-    },
-    {
-      "name": "CUSTOMER_ADDRESS",
-      "type": "Object",
-      "properties": [
-        {
-          "name": "ADDRESS",
-          "type": "String"
-        },
-        {
-          "name": "CITY",
-          "type": "String"
-        },
-        {
-          "name": "COMPLEMENT",
-          "type": "String"
-        },
-        {
-          "name": "COUNTRY",
-          "type": "String"
-        },
-        {
-          "name": "DISTRICT",
-          "type": "String"
-        },
-        {
-          "name": "STATE",
-          "type": "String"
-        },
-        {
-          "name": "ZIPCODE",
-          "type": "String"
-        }
-      ]
-    },
-    {
-      "name": "SHIPPING_ADDRESS",
-      "type": "Object",
-      "properties": [
-        {
-          "name": "ADDRESS",
-          "type": "String"
-        },
-        {
-          "name": "CITY",
-          "type": "String"
-        },
-        {
-          "name": "COMPLEMENT",
-          "type": "String"
-        },
-        {
-          "name": "COUNTRY",
-          "type": "String"
-        },
-        {
-          "name": "DISTRICT",
-          "type": "String"
-        },
-        {
-          "name": "STATE",
-          "type": "String"
-        },
-        {
-          "name": "ZIPCODE",
-          "type": "String"
-        },
-        {
-          "name": "RECEIVER_NAME",
-          "type": "String"
-        }
-      ]
-    },
-    {
-      "name": "SHIPPING_STATUS",
-      "type": "String",
-      "values": [
-        "Não embalado",
-        "Embalado",
-        "Não enviado",
-        "Enviado",
-        "Entregue"
-      ]
-    },
-    {
-      "name": "SHIPPING_COST",
-      "type": "Float"
-    },
-    {
-      "name": "SHIPPING_DISCOUNT",
-      "type": "Float"
-    },
-    {
-      "name": "SHIPPING_TYPE",
-      "type": "String",
-      "values": [
-        "Retirada",
-        "Entrega"
-      ]
-    },
-    {
-      "name": "SHIPPING_COMPANY",
-      "type": "String"
-    },
-    {
-      "name": "SHIPPING_GATEWAY",
-      "type": "String"
-    },
-    {
-      "name": "SHIPPING_TRACKING_NUMBER",
-      "type": "String"
-    },
-    {
-      "name": "SHIPPING_URL_TRACKING",
-      "type": "String"
-    },
-    {
-      "name": "COUPONS",
-      "type": "Array<Object>",
-      "objects_properties": [
-        {
-          "name": "ID",
-          "type": "String"
-        },
-        {
-          "name": "CODE",
-          "type": "String"
-        },
-        {
-          "name": "TYPE",
-          "type": "String",
-          "values": [
-            "Frete",
-            "Porcentagem",
-            "Valor"
-          ]
-        },
-        {
-          "name": "VALUE",
-          "type": "Float"
-        }
-      ]
-    },
-    {
-      "name": "PAYMENT_GATEWAY",
-      "type": "String",
-      "values": [
-        "Dinheiro",
-        "C6 Bank",
-        "NuvemPago",
-        "MercadoPago",
-        "PagSeguro",
-        "Cielo",
-        "Wirecard",
-        "Payu",
-        "Todo Pago",
-        "Não divulgado"
-      ]
-    },
-    {
-      "name": "PAYMENT_ID",
-      "type": "String"
-    },
-    {
-      "name": "PAYMENT_STATUS",
-      "type": "String",
-      "values": [
-        "Pendente",
-        "Pago",
-        "Recusado",
-        "Abandonado",
-        "Ressarcido"
-      ]
-    },
-    {
-      "name": "PAYMENT_DETAILS",
-      "type": "Object",
-      "properties": [
-        {
-          "name": "ASSOCIATED_COMPANY",
-          "type": "String",
-          "values": [
-            "Nenhuma",
-            "MasterCard",
-            "Visa",
-            "Elo"
-          ]
-        },
-        {
-          "name": "METHOD",
-          "type": "String",
-          "values": [
-            "Dinheiro",
-            "Cartão de Crédito",
-            "Cartão de Débito",
-            "Boleto",
-            "Pix",
-            "Outros"
-          ]
-        },
-        {
-          "name": "INSTALLMENTS",
-          "type": "Integer"
-        }
-      ]
-    },
-    {
-      "name": "PAYMENT_DATE",
-      "type": "String"
-    },
-    {
-      "name": "PAYMENT_AMOUNT",
-      "type": "Float"
-    },
-    {
-      "name": "TOTAL_AMOUNT",
-      "type": "Float"
-    },
-    {
-      "name": "DISCOUNTS",
-      "type": "Float"
-    },
-    {
-      "name": "PRODUCT_ITEMS",
-      "type": "Array<Object>",
-      "objects_properties": [
-        {
-          "name": "ID",
-          "type": "String"
-        },
-        {
-          "name": "PRODUCT_NAME",
-          "type": "String"
-        },
-        {
-          "name": "VARIANT_ID",
-          "type": "String"
-        },
-        {
-          "name": "VARIANT_NAME",
-          "type": "String"
-        },
-        {
-          "name": "SKU",
-          "type": "String"
-        },
-        {
-          "name": "IMAGE_URL",
-          "type": "String"
-        },
-        {
-          "name": "PRICE",
-          "type": "Float"
-        },
-        {
-          "name": "PROMOTIONAL_PRICE",
-          "type": "Float"
-        },
-        {
-          "name": "QUANTITY",
-          "type": "Integer"
-        }
-      ]
-    }
-  ],
-  "products": [
-    {
-      "name": "ID",
-      "type": "String"
-    },
-    {
-      "name": "PLATFORM",
-      "type": "String",
-      "values": [
-        "nuvemshop",
-        "mercadolivre",
-        "store"
-      ]
-    },
-    {
-      "name": "VARIANTS",
-      "type": "Object<Object>",
-      "properties": [
-        {
-          "name": "${SKU}",
-          "type": "Object"
-        }
-      ],
-      "objects_properties": [
-        {
-          "name": "ID",
-          "type": "String"
-        },
-        {
-          "name": "NAME",
-          "type": "String"
-        },
-        {
-          "name": "PRODUCT_ID",
-          "type": "String"
-        },
-        {
-          "name": "SKU",
-          "type": "String"
-        },
-        {
-          "name": "IMAGE_ID",
-          "type": "String"
-        },
-        {
-          "name": "INFINITE_STOCK",
-          "type": "bool"
-        },
-        {
-          "name": "AGE_GROUP",
-          "type": "String"
-        },
-        {
-          "name": "GENDER",
-          "type": "String"
-        },
-        {
-          "name": "DEPTH",
-          "type": "Float"
-        },
-        {
-          "name": "HEIGHT",
-          "type": "Float"
-        },
-        {
-          "name": "WIDTH",
-          "type": "Float"
-        },
-        {
-          "name": "WEIGHT",
-          "type": "Float"
-        },
-        {
-          "name": "PRICE",
-          "type": "Float"
-        },
-        {
-          "name": "PROMOTIONAL_PRICE",
-          "type": "Float"
-        },
-        {
-          "name": "STOCK",
-          "type": "Integer"
-        },
-        {
-          "name": "MPN",
-          "type": "String"
-        },
-        {
-          "name": "EAN_GTIN",
-          "type": "String"
-        },
-        {
-          "name": "LAST_UPDATE",
-          "type": "String"
-        }
-      ]
-    },
-    {
-      "name": "DESCRIPTION",
-      "type": "String"
-    },
-    {
-      "name": "NAME",
-      "type": "String"
-    },
-    {
-      "name": "BRAND",
-      "type": "String"
-    },
-    {
-      "name": "IMAGES",
-      "type": "Object<Object>",
-      "objects_properties": [
-        {
-          "name": "ID",
-          "type": "String"
-        },
-        {
-          "name": "POS",
-          "type": "Integer"
-        },
-        {
-          "name": "SRC",
-          "type": "String"
-        }
-      ],
-      "properties": [
-        {
-          "name": "${IMAGE_ID}",
-          "type": "Object"
-        }
-      ]
-    },
-    {
-      "name": "TAGS",
-      "type": "Array<String>"
-    },
-    {
-      "name": "SEO",
-      "type": "Object",
-      "properties":[
-        {
-          "name": "SEO_TITLE",
-          "type": "String"
-        },
-        {
-          "name": "SEO_DESCRIPTION",
-          "type": "String"
-        }
-      ]
-    },
-    {
-      "name": "PUBLISHED",
-      "type": "bool"
-    },
-    {
-      "name": "FREE_SHIPPING",
-      "type": "bool"
-    },
-    {
-      "name": "URL",
-      "type": "String"
-    },
-    {
-      "name": "LISTING_TYPE",
-      "type": "String",
-      "values": [
-        " ",
-        "Grátis",
-        "Clássico",
-        "Bronze",
-        "Prata",
-        "Ouro",
-        "Premium",
-        "Diamante"
-      ]
-    },
-    {
-      "name": "CATEGORIES_ID",
-      "type": "Array<String>"
-    }
-  ],
-  "variants": [
-    {
-      "name": "ID",
-      "type": "String"
-    },
-    {
-      "name": "NAME",
-      "type": "String"
-    },
-    {
-      "name": "PRODUCT_ID",
-      "type": "String"
-    },
-    {
-      "name": "SKU",
-      "type": "String"
-    },
-    {
-      "name": "IMAGE_ID",
-      "type": "String"
-    },
-    {
-      "name": "INFINITE_STOCK",
-      "type": "bool"
-    },
-    {
-      "name": "AGE_GROUP",
-      "type": "String"
-    },
-    {
-      "name": "GENDER",
-      "type": "String"
-    },
-    {
-      "name": "DEPTH",
-      "type": "Float"
-    },
-    {
-      "name": "HEIGHT",
-      "type": "Float"
-    },
-    {
-      "name": "WIDTH",
-      "type": "Float"
-    },
-    {
-      "name": "WEIGHT",
-      "type": "Float"
-    },
-    {
-      "name": "PRICE",
-      "type": "Float"
-    },
-    {
-      "name": "PROMOTIONAL_PRICE",
-      "type": "Float"
-    },
-    {
-      "name": "STOCK",
-      "type": "Integer"
-    },
-    {
-      "name": "MPN",
-      "type": "String"
-    },
-    {
-      "name": "EAN_GTIN",
-      "type": "String"
-    },
-    {
-      "name": "LAST_UPDATE",
-      "type": "String"
-    }
-  ],
-  "notifications": [
+[
+  {
+    "title": "Entity",
+    "path": "/entities"
+  },
+  {
+    "title": "Orders",
+    "path": "/entities/orders",
+    "content": [
+      {
+        "name": "ID",
+        "type": "String"
+      },
+      {
+        "name": "TOKEN",
+        "type": "String"
+      },
+      {
+        "name": "NUMBER",
+        "type": "Integer"
+      },
+      {
+        "name": "PLATFORM",
+        "type": "String",
+        "values": [
+          "nuvemshop",
+          "mercadolivre",
+          "store"
+        ]
+      },
+      {
+        "name": "STOREFRONT",
+        "type": "String",
+        "values": [
+          "site",
+          "manual",
+          "mobile",
+          "local"
+        ]
+      },
+      {
+        "name": "STATUS",
+        "type": "String",
+        "values": [
+          "Pagamento",
+          "Embalagem",
+          "Envio",
+          "Entrega",
+          "Concluído",
+          "Cancelado",
+          "Devolvido",
+          "Recusado"
+        ]
+      },
+      {
+        "name": "NOTES",
+        "type": "String"
+      },
+      {
+        "name": "LAST_UPDATE",
+        "type": "String"
+      },
+      {
+        "name": "CREATED_AT",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMER_ID",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMER_NAME",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMER_EMAIL",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMER_IDENTIFICATION",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMER_PHONE",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMER_ADDRESS",
+        "type": "Object",
+        "properties": [
+          {
+            "name": "ADDRESS",
+            "type": "String"
+          },
+          {
+            "name": "CITY",
+            "type": "String"
+          },
+          {
+            "name": "COMPLEMENT",
+            "type": "String"
+          },
+          {
+            "name": "COUNTRY",
+            "type": "String"
+          },
+          {
+            "name": "DISTRICT",
+            "type": "String"
+          },
+          {
+            "name": "STATE",
+            "type": "String"
+          },
+          {
+            "name": "ZIPCODE",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "name": "SHIPPING_ADDRESS",
+        "type": "Object",
+        "properties": [
+          {
+            "name": "ADDRESS",
+            "type": "String"
+          },
+          {
+            "name": "CITY",
+            "type": "String"
+          },
+          {
+            "name": "COMPLEMENT",
+            "type": "String"
+          },
+          {
+            "name": "COUNTRY",
+            "type": "String"
+          },
+          {
+            "name": "DISTRICT",
+            "type": "String"
+          },
+          {
+            "name": "STATE",
+            "type": "String"
+          },
+          {
+            "name": "ZIPCODE",
+            "type": "String"
+          },
+          {
+            "name": "RECEIVER_NAME",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "name": "SHIPPING_STATUS",
+        "type": "String",
+        "values": [
+          "Não embalado",
+          "Embalado",
+          "Não enviado",
+          "Enviado",
+          "Entregue"
+        ]
+      },
+      {
+        "name": "SHIPPING_COST",
+        "type": "Float"
+      },
+      {
+        "name": "SHIPPING_DISCOUNT",
+        "type": "Float"
+      },
+      {
+        "name": "SHIPPING_TYPE",
+        "type": "String",
+        "values": [
+          "Retirada",
+          "Entrega"
+        ]
+      },
+      {
+        "name": "SHIPPING_COMPANY",
+        "type": "String"
+      },
+      {
+        "name": "SHIPPING_GATEWAY",
+        "type": "String"
+      },
+      {
+        "name": "SHIPPING_TRACKING_NUMBER",
+        "type": "String"
+      },
+      {
+        "name": "SHIPPING_URL_TRACKING",
+        "type": "String"
+      },
+      {
+        "name": "COUPONS",
+        "type": "Array<Object>",
+        "objects_properties": [
+          {
+            "name": "ID",
+            "type": "String"
+          },
+          {
+            "name": "CODE",
+            "type": "String"
+          },
+          {
+            "name": "TYPE",
+            "type": "String",
+            "values": [
+              "Frete",
+              "Porcentagem",
+              "Valor"
+            ]
+          },
+          {
+            "name": "VALUE",
+            "type": "Float"
+          }
+        ]
+      },
+      {
+        "name": "PAYMENT_GATEWAY",
+        "type": "String",
+        "values": [
+          "Dinheiro",
+          "C6 Bank",
+          "NuvemPago",
+          "MercadoPago",
+          "PagSeguro",
+          "Cielo",
+          "Wirecard",
+          "Payu",
+          "Todo Pago",
+          "Não divulgado"
+        ]
+      },
+      {
+        "name": "PAYMENT_ID",
+        "type": "String"
+      },
+      {
+        "name": "PAYMENT_STATUS",
+        "type": "String",
+        "values": [
+          "Pendente",
+          "Pago",
+          "Recusado",
+          "Abandonado",
+          "Ressarcido"
+        ]
+      },
+      {
+        "name": "PAYMENT_DETAILS",
+        "type": "Object",
+        "properties": [
+          {
+            "name": "ASSOCIATED_COMPANY",
+            "type": "String",
+            "values": [
+              "Nenhuma",
+              "MasterCard",
+              "Visa",
+              "Elo"
+            ]
+          },
+          {
+            "name": "METHOD",
+            "type": "String",
+            "values": [
+              "Dinheiro",
+              "Cartão de Crédito",
+              "Cartão de Débito",
+              "Boleto",
+              "Pix",
+              "Outros"
+            ]
+          },
+          {
+            "name": "INSTALLMENTS",
+            "type": "Integer"
+          }
+        ]
+      },
+      {
+        "name": "PAYMENT_DATE",
+        "type": "String"
+      },
+      {
+        "name": "PAYMENT_AMOUNT",
+        "type": "Float"
+      },
+      {
+        "name": "TOTAL_AMOUNT",
+        "type": "Float"
+      },
+      {
+        "name": "DISCOUNTS",
+        "type": "Float"
+      },
+      {
+        "name": "PRODUCT_ITEMS",
+        "type": "Array<Object>",
+        "objects_properties": [
+          {
+            "name": "ID",
+            "type": "String"
+          },
+          {
+            "name": "PRODUCT_NAME",
+            "type": "String"
+          },
+          {
+            "name": "VARIANT_ID",
+            "type": "String"
+          },
+          {
+            "name": "VARIANT_NAME",
+            "type": "String"
+          },
+          {
+            "name": "SKU",
+            "type": "String"
+          },
+          {
+            "name": "IMAGE_URL",
+            "type": "String"
+          },
+          {
+            "name": "PRICE",
+            "type": "Float"
+          },
+          {
+            "name": "PROMOTIONAL_PRICE",
+            "type": "Float"
+          },
+          {
+            "name": "QUANTITY",
+            "type": "Integer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Products",
+    "path": "/entities/products",
+    "content": [
+      {
+        "name": "ID",
+        "type": "String"
+      },
+      {
+        "name": "PLATFORM",
+        "type": "String",
+        "values": [
+          "nuvemshop",
+          "mercadolivre",
+          "store"
+        ]
+      },
+      {
+        "name": "VARIANTS",
+        "type": "Object<Object>",
+        "properties": [
+          {
+            "name": "${SKU}",
+            "type": "Object"
+          }
+        ],
+        "objects_properties": [
+          {
+            "name": "ID",
+            "type": "String"
+          },
+          {
+            "name": "NAME",
+            "type": "String"
+          },
+          {
+            "name": "PRODUCT_ID",
+            "type": "String"
+          },
+          {
+            "name": "SKU",
+            "type": "String"
+          },
+          {
+            "name": "IMAGE_ID",
+            "type": "String"
+          },
+          {
+            "name": "INFINITE_STOCK",
+            "type": "bool"
+          },
+          {
+            "name": "AGE_GROUP",
+            "type": "String"
+          },
+          {
+            "name": "GENDER",
+            "type": "String"
+          },
+          {
+            "name": "DEPTH",
+            "type": "Float"
+          },
+          {
+            "name": "HEIGHT",
+            "type": "Float"
+          },
+          {
+            "name": "WIDTH",
+            "type": "Float"
+          },
+          {
+            "name": "WEIGHT",
+            "type": "Float"
+          },
+          {
+            "name": "PRICE",
+            "type": "Float"
+          },
+          {
+            "name": "PROMOTIONAL_PRICE",
+            "type": "Float"
+          },
+          {
+            "name": "STOCK",
+            "type": "Integer"
+          },
+          {
+            "name": "MPN",
+            "type": "String"
+          },
+          {
+            "name": "EAN_GTIN",
+            "type": "String"
+          },
+          {
+            "name": "LAST_UPDATE",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "name": "DESCRIPTION",
+        "type": "String"
+      },
+      {
+        "name": "NAME",
+        "type": "String"
+      },
+      {
+        "name": "BRAND",
+        "type": "String"
+      },
+      {
+        "name": "IMAGES",
+        "type": "Object<Object>",
+        "objects_properties": [
+          {
+            "name": "ID",
+            "type": "String"
+          },
+          {
+            "name": "POS",
+            "type": "Integer"
+          },
+          {
+            "name": "SRC",
+            "type": "String"
+          }
+        ],
+        "properties": [
+          {
+            "name": "${IMAGE_ID}",
+            "type": "Object"
+          }
+        ]
+      },
+      {
+        "name": "TAGS",
+        "type": "Array<String>"
+      },
+      {
+        "name": "SEO",
+        "type": "Object",
+        "properties":[
+          {
+            "name": "SEO_TITLE",
+            "type": "String"
+          },
+          {
+            "name": "SEO_DESCRIPTION",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "name": "PUBLISHED",
+        "type": "bool"
+      },
+      {
+        "name": "FREE_SHIPPING",
+        "type": "bool"
+      },
+      {
+        "name": "URL",
+        "type": "String"
+      },
+      {
+        "name": "LISTING_TYPE",
+        "type": "String",
+        "values": [
+          " ",
+          "Grátis",
+          "Clássico",
+          "Bronze",
+          "Prata",
+          "Ouro",
+          "Premium",
+          "Diamante"
+        ]
+      },
+      {
+        "name": "CATEGORIES_ID",
+        "type": "Array<String>"
+      }
+    ]
+  },
+  {
+    "title": "Variants",
+    "path": "/entities/variants",
+    "content": [
+      {
+        "name": "ID",
+        "type": "String"
+      },
+      {
+        "name": "NAME",
+        "type": "String"
+      },
+      {
+        "name": "PRODUCT_ID",
+        "type": "String"
+      },
+      {
+        "name": "SKU",
+        "type": "String"
+      },
+      {
+        "name": "IMAGE_ID",
+        "type": "String"
+      },
+      {
+        "name": "INFINITE_STOCK",
+        "type": "bool"
+      },
+      {
+        "name": "AGE_GROUP",
+        "type": "String"
+      },
+      {
+        "name": "GENDER",
+        "type": "String"
+      },
+      {
+        "name": "DEPTH",
+        "type": "Float"
+      },
+      {
+        "name": "HEIGHT",
+        "type": "Float"
+      },
+      {
+        "name": "WIDTH",
+        "type": "Float"
+      },
+      {
+        "name": "WEIGHT",
+        "type": "Float"
+      },
+      {
+        "name": "PRICE",
+        "type": "Float"
+      },
+      {
+        "name": "PROMOTIONAL_PRICE",
+        "type": "Float"
+      },
+      {
+        "name": "STOCK",
+        "type": "Integer"
+      },
+      {
+        "name": "MPN",
+        "type": "String"
+      },
+      {
+        "name": "EAN_GTIN",
+        "type": "String"
+      },
+      {
+        "name": "LAST_UPDATE",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "title": "Notifications",
+    "path": "/entities/notifications",
+    "content": [
     {
       "name": "data",
       "type": "Object",
@@ -621,214 +640,223 @@
       "name": "topic",
       "type": "String"
     }
-  ],
-  "payments": [
-    {
-      "name": "ID",
-      "type": "String"
-    },
-    {
-      "name": "PLATFORM",
-      "type": "String"
-    },
-    {
-      "name": "DATE",
-      "type": "String"
-    },
-    {
-      "name": "DATE_APPROVED",
-      "type": "String"
-    },
-    {
-      "name": "TYPE",
-      "type": "String",
-      "values": [
-        "Cartão de Crédito",
-        "Cartão de Débito",
-        "Boleto",
-        "Débito online (TEF)",
-        "Saldo PagSeguro",
-        "Oi Paggo*",
-        "Depósito em conta",
-        "Cartão Emergencial Caixa (Débito)",
-        "Transfêrencia Bancária"
-      ]
-    },
-    {
-      "name": "STATUS",
-      "type": "String",
-      "values": [
-        "Aguard. Pagmtº",
-        "Em análise",
-        "Paga",
-        "Cancelada",
-        "Devolvida",
-        "Em disputa",
-        "Debitado",
-        "Disponível",
-        "Retenção temporária"
-      ]
-    },
-    {
-      "name": "LAST_UPDATE",
-      "type": "String"
-    },
-    {
-      "name": "GATEWAY",
-      "type": "String",
-      "values": [
-        "MasterCard",
-        "Visa",
-        "Pix",
-        "American Express",
-        "Diners",
-        "Hipercard",
-        "Aura",
-        "Elo",
-        "PLENOCard",
-        "PersonalCard",
-        "JCB",
-        "Discover",
-        "BrasilCard",
-        "FORTBRASIL",
-        "CARDBAN",
-        "VALECARD",
-        "Cabal",
-        "Mais!",
-        "Avista",
-        "GRANDCARD",
-        "Sorocred",
-        "Up Policard",
-        "Banese Card",
-        "Boleto Bradesco",
-        "Boleto Santander",
-        "Débito online Bradesco",
-        "Débito online Itaú",
-        "Débito online Unibanco",
-        "Débito online Banco do Brasil",
-        "Débito online Banco Real",
-        "Débito online Banrisul",
-        "Débito online HSBC",
-        "Saldo PagSeguro",
-        "Oi Paggo",
-        "Depósito em conta - Banco do Brasil"
-      ]
-    },
-    {
-      "name": "LINK",
-      "type": "String"
-    },
-    {
-      "name": "SUBTOTAL",
-      "type": "Float"
-    },
-    {
-      "name": "TOTAL",
-      "type": "Float"
-    },
-    {
-      "name": "FEES",
-      "type": "Float"
-    },
-    {
-      "name": "INSTALLMENTS",
-      "type": "Integer"
-    },
-    {
-      "name": "CUSTOMER_NAME",
-      "type": "String"
-    },
-    {
-      "name": "CUSTOMER_EMAIL",
-      "type": "String"
-    },
-    {
-      "name": "CUSTOMER_PHONE",
-      "type": "String"
-    },
-    {
-      "name": "CUSTOMER_IDENTIFICATION",
-      "type": "String"
-    }
-  ],
-  "shipping": [
-    {
-      "name": "ID",
-      "type": "String"
-    },
-    {
-      "name": "PROTOCOL",
-      "type": "String"
-    },
-    {
-      "name": "PRICE",
-      "type": "Float"
-    },
-    {
-      "name": "COUPON",
-      "type": "Float"
-    },
-    {
-      "name": "DISCOUNT",
-      "type": "Float"
-    },
-    {
-      "name": "INSURANCE",
-      "type": "Float"
-    },
-    {
-      "name": "DELIVERY_MIN",
-      "type": "Integer"
-    },
-    {
-      "name": "DELIVERY_MAX",
-      "type": "Integer"
-    },
-    {
-      "name": "STATUS",
-      "type": "String",
-      "values": [
-        "Liberado",
-        "Postado",
-        "Entregue",
-        "Não entregue"
-      ]
-    },
-    {
-      "name": "NOTE",
-      "type": "String"
-    },
-    {
-      "name": "TRACKING",
-      "type": "String"
-    },
-    {
-      "name": "SHIPPING_COMPANY",
-      "type": "String"
-    },
-    {
-      "name": "ORDER_NUMBER",
-      "type": "String"
-    },
-    {
-      "name": "CREATED_AT",
-      "type": "String"
-    },
-    {
-      "name": "DELIVERED_AT",
-      "type": "String"
-    },
-    {
-      "name": "PAID_AT",
-      "type": "String"
-    },
-    {
-      "name": "UPDATED_AT",
-      "type": "String"
-    },
-    {
-      "name": "POSTED_AT",
-      "type": "String"
-    }
-  ]
-}
+    ]
+  },
+  {
+    "title": "Payments",
+    "path": "/entities/payments",
+    "content": [
+      {
+        "name": "ID",
+        "type": "String"
+      },
+      {
+        "name": "PLATFORM",
+        "type": "String"
+      },
+      {
+        "name": "DATE",
+        "type": "String"
+      },
+      {
+        "name": "DATE_APPROVED",
+        "type": "String"
+      },
+      {
+        "name": "TYPE",
+        "type": "String",
+        "values": [
+          "Cartão de Crédito",
+          "Cartão de Débito",
+          "Boleto",
+          "Débito online (TEF)",
+          "Saldo PagSeguro",
+          "Oi Paggo*",
+          "Depósito em conta",
+          "Cartão Emergencial Caixa (Débito)",
+          "Transfêrencia Bancária"
+        ]
+      },
+      {
+        "name": "STATUS",
+        "type": "String",
+        "values": [
+          "Aguard. Pagmtº",
+          "Em análise",
+          "Paga",
+          "Cancelada",
+          "Devolvida",
+          "Em disputa",
+          "Debitado",
+          "Disponível",
+          "Retenção temporária"
+        ]
+      },
+      {
+        "name": "LAST_UPDATE",
+        "type": "String"
+      },
+      {
+        "name": "GATEWAY",
+        "type": "String",
+        "values": [
+          "MasterCard",
+          "Visa",
+          "Pix",
+          "American Express",
+          "Diners",
+          "Hipercard",
+          "Aura",
+          "Elo",
+          "PLENOCard",
+          "PersonalCard",
+          "JCB",
+          "Discover",
+          "BrasilCard",
+          "FORTBRASIL",
+          "CARDBAN",
+          "VALECARD",
+          "Cabal",
+          "Mais!",
+          "Avista",
+          "GRANDCARD",
+          "Sorocred",
+          "Up Policard",
+          "Banese Card",
+          "Boleto Bradesco",
+          "Boleto Santander",
+          "Débito online Bradesco",
+          "Débito online Itaú",
+          "Débito online Unibanco",
+          "Débito online Banco do Brasil",
+          "Débito online Banco Real",
+          "Débito online Banrisul",
+          "Débito online HSBC",
+          "Saldo PagSeguro",
+          "Oi Paggo",
+          "Depósito em conta - Banco do Brasil"
+        ]
+      },
+      {
+        "name": "LINK",
+        "type": "String"
+      },
+      {
+        "name": "SUBTOTAL",
+        "type": "Float"
+      },
+      {
+        "name": "TOTAL",
+        "type": "Float"
+      },
+      {
+        "name": "FEES",
+        "type": "Float"
+      },
+      {
+        "name": "INSTALLMENTS",
+        "type": "Integer"
+      },
+      {
+        "name": "CUSTOMER_NAME",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMER_EMAIL",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMER_PHONE",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMER_IDENTIFICATION",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "title": "Shipping",
+    "path": "/entities/shipping",
+    "content": [
+      {
+        "name": "ID",
+        "type": "String"
+      },
+      {
+        "name": "PROTOCOL",
+        "type": "String"
+      },
+      {
+        "name": "PRICE",
+        "type": "Float"
+      },
+      {
+        "name": "COUPON",
+        "type": "Float"
+      },
+      {
+        "name": "DISCOUNT",
+        "type": "Float"
+      },
+      {
+        "name": "INSURANCE",
+        "type": "Float"
+      },
+      {
+        "name": "DELIVERY_MIN",
+        "type": "Integer"
+      },
+      {
+        "name": "DELIVERY_MAX",
+        "type": "Integer"
+      },
+      {
+        "name": "STATUS",
+        "type": "String",
+        "values": [
+          "Liberado",
+          "Postado",
+          "Entregue",
+          "Não entregue"
+        ]
+      },
+      {
+        "name": "NOTE",
+        "type": "String"
+      },
+      {
+        "name": "TRACKING",
+        "type": "String"
+      },
+      {
+        "name": "SHIPPING_COMPANY",
+        "type": "String"
+      },
+      {
+        "name": "ORDER_NUMBER",
+        "type": "String"
+      },
+      {
+        "name": "CREATED_AT",
+        "type": "String"
+      },
+      {
+        "name": "DELIVERED_AT",
+        "type": "String"
+      },
+      {
+        "name": "PAID_AT",
+        "type": "String"
+      },
+      {
+        "name": "UPDATED_AT",
+        "type": "String"
+      },
+      {
+        "name": "POSTED_AT",
+        "type": "String"
+      }
+    ]
+  }
+]
