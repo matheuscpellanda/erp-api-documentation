@@ -7,7 +7,6 @@
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  /* background-color: red; */
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -34,7 +33,7 @@
   font-weight: 600;
 }
 
-.documentations > p {
+.doc-resume > p {
   font-size: 1.5rem;
   margin: 0;
   padding: 1vh 7vw;
@@ -45,7 +44,7 @@
   font-weight: 400;
 }
 
-.documentations > ul {
+.doc-resume > ul {
   display: flex;
   flex-direction: column;
   width: 85vw;
@@ -58,7 +57,7 @@
   border-radius: 20px;
 }
 
-.documentations > ul > li {
+.doc-resume > ul > li {
   font-family: 'Rubik';
   font-size: 1.3rem;
   font-weight: 300;
@@ -76,33 +75,50 @@
 
 @media screen and (min-width: 781px) {
 
-  /* .docs-body {
-    margin-top: 70px;
+  .documentations {
+    padding: 70px 0 0;
   }
 
-  .docs-category {
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin: 2vh 0;
-    width: 70vw;
+  .doc-primary {
+    display: flex;
+    margin: 3vh 7vw 0;
+    justify-content: space-between;
   }
 
-  .doc-box {
-    width: 20vw;
-    height: 40vh;
-    margin: 10vh 0;
-    justify-content: flex-start;
+  .doc-resume {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .docs-body > hr:first-of-type {
-    width: 90%;
+  .doc-resume:first-child {
+    width: 35%;
+  }
+
+  .doc-resume:last-child {
+    width: 55%;
+  }
+
+  .doc-title {
+    font-size: 2.5rem;
     margin: 0;
+    padding: 0 0 2vh;
   }
-  
-  .docs-body > hr {
-    width: 70vw;
-    margin: 5vh 0;
-  } */
+
+  .doc-resume > p {
+    text-align: start;
+    margin: 0;
+    padding: 1vh 0;
+  }
+
+  .doc-resume > ul {
+    width: 100%;
+  }
+
+  .doc-resume > ul > li {
+    margin: 2vh 3vw;
+  }
 
 }

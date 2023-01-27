@@ -13,3 +13,25 @@
   font-family: 'Rubik';
   font-weight: 500;
 }
+
+.documentation-category-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 781px) {
+
+  .documentation-category-title {
+    font-size: 3.5rem;
+  }
+
+  .documentation-category-row {
+    width: 84vw;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+}

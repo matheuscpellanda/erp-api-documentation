@@ -67,19 +67,19 @@ export default class Home extends Component {
   animationTitles = {
     className: 'home-title',
     whileInView: () => {
-      const { firstOpen } = this.state;
-      if (!firstOpen) {
+      const { toOpen } = this.state;
+      if (!toOpen) {
         this.setState({
-          firstOpen: true,
+          toOpen: true,
         });
       }
     },
     transition: { type: 'tween', duration: 2 },
     initial: { x: -200 },
     animate: () => {
-      const { firstOpen } = this.state;
+      const { toOpen } = this.state;
       let resp = {};
-      if (firstOpen) {
+      if (toOpen) {
         resp = { x: [-200, 0] };
       }
       return resp;
@@ -89,9 +89,9 @@ export default class Home extends Component {
   animationButtonStarted = {
     className: 'button-get-started',
     animate: () => {
-      const { firstOpen } = this.state;
+      const { toOpen } = this.state;
       let resp = {};
-      if (firstOpen) {
+      if (toOpen) {
         resp = {
           scale: 1,
           x: [40, 0],
@@ -116,10 +116,14 @@ export default class Home extends Component {
     this.state = {
       showPaymentResponse: '200',
       showOrderCreationResponse: '200',
-      firstOpen: undefined,
+      toOpen: undefined,
       menuState: 'closed',
       toCloseMenu: false,
     };
+  }
+
+  componentDidMount() {
+    window.scroll(0, 0);
   }
 
   showResponsePayment = ({ target: { innerText } }) => {

@@ -6,6 +6,10 @@ import ServiceSidebar from '../components/ServiceSidebar';
 import './css/Services.css';
 
 export default class Services extends Component {
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
+
   render() {
     const { history } = this.props;
     return (

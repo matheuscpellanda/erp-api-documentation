@@ -13,7 +13,9 @@
   cursor: pointer;
   text-decoration: none;
   min-height: 30vh;
+  user-select: none;
 }
+
 .box-title {
   margin: 2vh 0 1vh;
   font-size: 1.6rem;
@@ -34,9 +36,22 @@
   font-size: 1rem;
   font-family: 'Rubik';
   font-weight: 400;
-  color: darkred;
 }
 
 .documentation-box > .doc-separator {
   margin: 1vh 0;
+}
+
+@media screen and (min-width: 781px) {
+  
+  .documentation-box {
+    width: 26vw;
+    margin: 2vh 1vw;
+    box-sizing: border-box;
+  }
+
+  .documentation-box > .doc-separator {
+    width: 90%;
+  }
+
 }
