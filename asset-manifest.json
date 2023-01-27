@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/erp-api-documentation/static/css/main.855b2495.css",
-    "main.js": "/erp-api-documentation/static/js/main.038b6242.js",
+    "main.css": "/erp-api-documentation/static/css/main.797c5427.css",
+    "main.js": "/erp-api-documentation/static/js/main.ff4eca5a.js",
     "static/js/787.ece903ad.chunk.js": "/erp-api-documentation/static/js/787.ece903ad.chunk.js",
     "static/media/example_07.png": "/erp-api-documentation/static/media/example_07.7966fbe528b1baf3bcaa.png",
     "static/media/example_01.png": "/erp-api-documentation/static/media/example_01.e12a8624c6941c6f3ae0.png",
@@ -11,12 +11,12 @@
     "index.html": "/erp-api-documentation/index.html",
     "static/media/close_black_24dp.svg": "/erp-api-documentation/static/media/close_black_24dp.b529109f9e749db4bb0b8e57ef345a89.svg",
     "static/media/menu_black_24dp.svg": "/erp-api-documentation/static/media/menu_black_24dp.0e53969fb6ffe7a2533c1a5c3079bd92.svg",
-    "main.855b2495.css.map": "/erp-api-documentation/static/css/main.855b2495.css.map",
-    "main.038b6242.js.map": "/erp-api-documentation/static/js/main.038b6242.js.map",
+    "main.797c5427.css.map": "/erp-api-documentation/static/css/main.797c5427.css.map",
+    "main.ff4eca5a.js.map": "/erp-api-documentation/static/js/main.ff4eca5a.js.map",
     "787.ece903ad.chunk.js.map": "/erp-api-documentation/static/js/787.ece903ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.855b2495.css",
-    "static/js/main.038b6242.js"
+    "static/css/main.797c5427.css",
+    "static/js/main.ff4eca5a.js"
   ]
 }
