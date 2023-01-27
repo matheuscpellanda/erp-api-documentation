@@ -1,0 +1,38 @@
+.page-controll {
+  width: 100%;
+}
+
+.page-controll > .button-row {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-previous-page, .button-next-page {
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: 40%;
+  max-width: 250px;
+  min-width: 100px;
+  user-select: none;
+}
+
+.button-previous-page {
+  background: linear-gradient(180deg, rgb(192, 192, 192) 0%, rgb(237, 237, 237) 100%);
+  margin: 1vh auto 2vh 0;
+}
+
+.button-next-page {
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  background: var(--default-gradient);
+  margin: 1vh 0 2vh auto;
+  color: white;
+}

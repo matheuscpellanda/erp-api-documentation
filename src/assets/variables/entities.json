@@ -1,7 +1,9 @@
 [
   {
     "title": "Entity",
-    "path": "/entities"
+    "subtitle": "",
+    "path": "/entities",
+    "content": []
   },
   {
     "title": "Orders",

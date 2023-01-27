@@ -22,8 +22,7 @@ export default class EntityCard extends Component {
         {
           values
             ? (
-              <div className="row">
-                <br />
+              <div className="column">
                 <div className="entity-name"><h2>Values:</h2></div>
                 <div className="entity-secondary">
                   <div key="values" className="entity-values">
@@ -38,8 +37,7 @@ export default class EntityCard extends Component {
         {
           properties
             ? (
-              <div className="row">
-                <br />
+              <div className="column">
                 <div className="entity-name"><h2>Properties:</h2></div>
                 <div className="entity-secondary">
                   <div key="properties" className="entity-values">
@@ -51,13 +49,15 @@ export default class EntityCard extends Component {
                           { property.name }
                           :
                         </p>
-                        <p className="json-value-object">
-                          { `<${property.type}>` }
-                          {' '}
-                          { property.values ? `${JSON.stringify(property.values).replaceAll(',', ', ').replaceAll('"', '\'')}` : null }
-                          {' '}
-                          ,
-                        </p>
+                        <div className="column">
+                          <p className="json-value-object">{ `<${property.type}>` }</p>
+                          <p className="json-value-object">
+                            {' '}
+                            { property.values ? `${JSON.stringify(property.values).replaceAll(',', ', ').replaceAll('"', '\'')}` : null }
+                            {' '}
+                            ,
+                          </p>
+                        </div>
                       </div>
                     ))
                   }
@@ -71,8 +71,7 @@ export default class EntityCard extends Component {
         {
           objectsProperties
             ? (
-              <div className="row">
-                <br />
+              <div className="column">
                 <div className="entity-name"><h2>Objects Properties:</h2></div>
                 <div className="entity-secondary">
                   <div key="values" className="entity-values">
