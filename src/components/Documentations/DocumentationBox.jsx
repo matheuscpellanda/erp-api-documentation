@@ -26,6 +26,7 @@ export default class DocumentationBox extends Component {
         }, 150);
       });
     },
+    initial: { x: -200 },
     whileInView: () => {
       const { toOpen } = this.state;
       if (!toOpen) {
