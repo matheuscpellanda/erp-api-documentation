@@ -7,7 +7,7 @@ export default class DocumentationBox extends Component {
   boxAnimation = {
     className: 'documentation-box',
     whileHover: () => {
-      if (window.innerWidth) {
+      if (window.innerWidth >= 781) {
         return {
           scale: 1.1,
           background: 'var(--default-gradient)',
