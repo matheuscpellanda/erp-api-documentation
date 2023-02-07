@@ -1,7 +1,10 @@
 [
   {
     "title": "Entity",
-    "subtitle": "",
+    "subtitle": "Welcome to Entities sections! Here you can get all informations about the API Entities.",
+    "text": [
+      "Aq texto"
+    ],
     "path": "/entities",
     "content": []
   },

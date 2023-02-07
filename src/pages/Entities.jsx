@@ -22,7 +22,15 @@ function Entities({ history, history: { location: { pathname } } }) {
           }
         </span>
         <h1 className="entities-title">{pageObj.title}</h1>
+        {
+          pageObj.subtitle && <h2 className="entities-subtitle">{pageObj.subtitle}</h2>
+        }
         <PageControll pageTitle={pageObj.title} entities={entities} history={history} />
+        {
+          pageObj.text && pageObj.text.map((text, index) => (
+            <p key={index}>{text}</p>
+          ))
+        }
         <div className="entities-content">
           {
             pageObj.content.map((card) => <EntityCard key={card.name} data={card} />)

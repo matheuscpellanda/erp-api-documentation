@@ -21,6 +21,7 @@
         "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
         "react/jsx-filename-extension": [0, { "allow": "as-needed" }],
         "react/jsx-props-no-spreading": [0],
+        "react/no-array-index-key": [1],
         "no-restricted-syntax" : [
             "error",
             {

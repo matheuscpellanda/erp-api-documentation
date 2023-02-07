@@ -1,12 +1,19 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import './css/EntityCard.css';
+import ObjectPropCard from './ObjectPropCard';
+import PropertyCard from './PropertyCard';
+import ValueCard from './ValueCard';
 
 export default class EntityCard extends Component {
   render() {
     const {
       data,
-      data: { values, properties, objects_properties: objectsProperties },
+      data: {
+        values,
+        properties,
+        objects_properties: objectsProperties,
+      },
     } = this.props;
     return (
       <div className="entity-card">
@@ -20,85 +27,45 @@ export default class EntityCard extends Component {
           <div className="entity-type">{ `<${data.type}>` }</div>
         </div>
         {
-          values
-            ? (
-              <div className="column">
-                <div className="entity-name"><h2>Values:</h2></div>
-                <div className="entity-secondary">
-                  <div key="values" className="entity-values">
-                    { JSON.stringify(values).replaceAll(',', ', ').replaceAll('[', '[ ').replaceAll(']', ' ]')
-                      .replaceAll('"', '\'') }
-                  </div>
-                </div>
-              </div>
-            )
-            : null
+          values && <ValueCard data={values} />
         }
         {
-          properties
-            ? (
-              <div className="column">
-                <div className="entity-name"><h2>Properties:</h2></div>
-                <div className="entity-secondary">
-                  <div key="properties" className="entity-values">
-                    <p className="json-open-object">{'{'}</p>
-                    {
-                    properties.map((property) => (
-                      <div key={property.name} className="entity-properties">
-                        <p className="json-key-object">
-                          { property.name }
-                          :
-                        </p>
-                        <div className="column">
-                          <p className="json-value-object">{ `<${property.type}>` }</p>
-                          <p className="json-value-object">
-                            {' '}
-                            { property.values ? `${JSON.stringify(property.values).replaceAll(',', ', ').replaceAll('"', '\'')}` : null }
-                            {' '}
-                            ,
-                          </p>
-                        </div>
-                      </div>
-                    ))
+          properties && (
+            <div className="column">
+              <div className="entity-name"><h2>Properties:</h2></div>
+              <div className="entity-secondary">
+                <div key="properties" className="entity-values">
+                  <p className="json-open-object">{'{'}</p>
+                  {
+                    properties.map(
+                      (property) => (<PropertyCard key={property.name} data={property} />),
+                    )
                   }
-                    <p className="json-open-object">{'}'}</p>
-                  </div>
+                  <p className="json-open-object">{'}'}</p>
                 </div>
               </div>
-            )
-            : null
+            </div>
+
+          )
         }
         {
           objectsProperties
-            ? (
+            && (
               <div className="column">
                 <div className="entity-name"><h2>Objects Properties:</h2></div>
                 <div className="entity-secondary">
                   <div key="values" className="entity-values">
                     <p className="json-open-object">{'{'}</p>
                     {
-                    objectsProperties.map((property) => (
-                      <div key={property.name} className="entity-properties">
-                        <p className="json-key-object">
-                          { property.name }
-                          :
-                        </p>
-                        <p className="json-value-object">
-                          { `<${property.type}>` }
-                          {' '}
-                          { property.values ? `${JSON.stringify(property.values).replaceAll(',', ', ').replaceAll('"', '\'')}` : null }
-                          {' '}
-                          ,
-                        </p>
-                      </div>
-                    ))
-                  }
+                      objectsProperties.map(
+                        (property) => (<ObjectPropCard key={property.name} data={property} />),
+                      )
+                    }
                     <p className="json-open-object">{'}'}</p>
                   </div>
                 </div>
               </div>
             )
-            : null
         }
       </div>
     );

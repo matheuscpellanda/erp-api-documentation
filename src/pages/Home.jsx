@@ -177,7 +177,7 @@ export default class Home extends Component {
               <motion.h2
                 {...{ ...this.animationTitles, className: 'home-last-updated' }}
               >
-                Last Update: 23/01/2023
+                Last Update: 03/02/2023
               </motion.h2>
               <motion.button
                 {...this.animationButtonStarted}
