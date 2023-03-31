@@ -447,7 +447,7 @@
           },
           {
             "name": "EAN_GTIN",
-            "type": "String"
+            "type": "Array<String>"
           },
           {
             "name": "LAST_UPDATE",
@@ -611,7 +611,7 @@
       },
       {
         "name": "EAN_GTIN",
-        "type": "String"
+        "type": "Array<String>"
       },
       {
         "name": "LAST_UPDATE",
