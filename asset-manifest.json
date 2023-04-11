@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/erp-api-documentation/static/css/main.4a5d2ad2.css",
-    "main.js": "/erp-api-documentation/static/js/main.3f15039e.js",
+    "main.js": "/erp-api-documentation/static/js/main.0555c616.js",
     "static/js/787.ece903ad.chunk.js": "/erp-api-documentation/static/js/787.ece903ad.chunk.js",
     "static/media/ntf1.png": "/erp-api-documentation/static/media/ntf1.a7e0ffbf1e43cdbcb456.png",
     "static/media/subscribe-image.png": "/erp-api-documentation/static/media/subscribe-image.9340723d837e9d606eeb.png",
@@ -12,11 +12,11 @@
     "static/media/logo.svg": "/erp-api-documentation/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/erp-api-documentation/index.html",
     "main.4a5d2ad2.css.map": "/erp-api-documentation/static/css/main.4a5d2ad2.css.map",
-    "main.3f15039e.js.map": "/erp-api-documentation/static/js/main.3f15039e.js.map",
+    "main.0555c616.js.map": "/erp-api-documentation/static/js/main.0555c616.js.map",
     "787.ece903ad.chunk.js.map": "/erp-api-documentation/static/js/787.ece903ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a5d2ad2.css",
-    "static/js/main.3f15039e.js"
+    "static/js/main.0555c616.js"
   ]
 }
